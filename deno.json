@@ -1,0 +1,4 @@
+{
+  "fmt": { "lineWidth": 120, "include": ["web/", "tools/"], "exclude": ["**/*.md"] },
+  "lint": { "include": ["web/", "tools/"] }
+}
