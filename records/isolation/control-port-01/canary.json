@@ -1,0 +1,10 @@
+{
+  "role": "control-port",
+  "run": "01",
+  "attempts": 12,
+  "tokenLeaked": false,
+  "wroteOutside": false,
+  "insideWorks": true,
+  "networkLeaked": false,
+  "pass": true
+}

@@ -17,6 +17,7 @@ Given focus on card <id>.
 After <n> ms.                              advance the clock
 Remember history depth as <name>.
 When <intent> <arguments>.                 an intent of spec/app.md; "via pointer" picks that binding
+When enter-address card <id>.              or "enter-address board"; the adapter writes the address
 Then place title "<text>".
 Then address board.                        also with text, labels, assignees
 Then address card <id>.

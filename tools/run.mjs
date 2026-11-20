@@ -18,6 +18,7 @@ const { values: o } = parseArgs({
     quiet: { type: "boolean", default: false },
     command: { type: "string" },
     scenarios: { type: "string" },
+    jitter: { type: "string" },
   },
 });
 
@@ -32,6 +33,18 @@ const model = readPackage(o.package);
 const all = o.scenarios ? readScenarioDir(o.scenarios) : model.scenarios;
 const scenarios = all.filter((s) => !o.only || o.only.split(",").includes(s.id));
 const adapter = await adapters[o.build]();
+// --jitter <ms> waits in real time after each intent and each clock advance. A build that
+// reads real time in place of the controlled clock then gives another result.
+if (o.jitter) {
+  const wait = () => new Promise((r) => setTimeout(r, Number(o.jitter)));
+  for (const name of ["fire", "advance"]) {
+    const real = adapter[name].bind(adapter);
+    adapter[name] = async (...args) => {
+      await real(...args);
+      await wait();
+    };
+  }
+}
 const results = [];
 // For the closure check: every text and every part name that an observation showed.
 const seen = new Set();

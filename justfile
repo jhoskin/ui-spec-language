@@ -33,8 +33,13 @@ scenarios-web:
     node tools/run.mjs --build web --quiet --out out/results-web.json
     node tools/closure.mjs --build web
 
+# Public scenarios on the terminal port, and the port's own tests.
+scenarios-terminal:
+    /opt/homebrew/bin/python3 -m unittest discover -s tui/tests
+    node tools/run.mjs --build terminal --quiet --out out/results-terminal.json
+
 # Generate trace.md from the results of the builds.
 trace:
     node tools/trace.mjs
 
-check: lint-md lint-js test spec-lint scenarios-web trace
+check: lint-md lint-js test spec-lint scenarios-web scenarios-terminal trace

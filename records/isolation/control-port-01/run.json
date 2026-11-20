@@ -1,0 +1,64 @@
+{
+  "role": "control-port",
+  "run": "01",
+  "model": "opus",
+  "tools": "Read,Write,Edit,Glob,Grep,Bash",
+  "started": "2026-11-20T14:28:43.660Z",
+  "ended": "2026-11-20T14:51:24.932Z",
+  "promptSha256": "a6a400da548a55ada6d0a5b865ad2f501114df3949669f16dfd99f5a77e804bc",
+  "manifest": [
+    {
+      "path": "fixture/data.json",
+      "sha256": "a6b159ceece3c05adbdf6d74359557b76c81a1b6867ef7c60d871d829f67791e"
+    },
+    {
+      "path": "fixture/fixture.md",
+      "sha256": "370174f3984ef6f3c4bb04b47ead1d7aee9f2cad22bbc1cc60bcf2e8d457d38f"
+    },
+    {
+      "path": "fixture/harness.md",
+      "sha256": "2558fdacc4cf6f61c54d62a60bb53f3bfec109b6c4aca8e1a1ac3bf1c48b2927"
+    },
+    {
+      "path": "fixture/service.json",
+      "sha256": "e60b616b3dec3447c0cf8d45c7d2756288d34c073581f83d52dc91ecc03ec9ee"
+    },
+    {
+      "path": "fixture/vectors.json",
+      "sha256": "47490d04801a44ee72dbe0c57809ff3896bfdcfc4786a77c5af771e4de96dc1b"
+    },
+    {
+      "path": "spec/app.md",
+      "sha256": "efb1ee265ace2de076bdcf80ab5de7729764ce50139e12ac145faeb565830e2b"
+    },
+    {
+      "path": "spec/conventions.md",
+      "sha256": "5e449738d0b6de9408c3f1c1f21e5cbb55bcb8cc2ac83d76e7067b16a99ec554"
+    },
+    {
+      "path": "spec/modality/terminal.md",
+      "sha256": "33dc11d4612adb53eb6bd9ece2c1e7402020038b4c3817c2de4cc8a01b196780"
+    },
+    {
+      "path": "spec/places/board.md",
+      "sha256": "05de0babb8990812e5417ecdced47e286b5f21624769c01c161825a38ed3f42d"
+    },
+    {
+      "path": "spec/places/card.md",
+      "sha256": "c3c30dece7fd1c4b6b2587abbe5e66970aa177c973424ccbea34015985271b39"
+    },
+    {
+      "path": "spec/places/missing.md",
+      "sha256": "3bd97a9e793fb21a53d3f722f0a76db97997402c8061d3c4221d2dbcf3b835fc"
+    }
+  ],
+  "transcriptSha256": "338e41102cb4545cbe6134e71030364bc4596bf798d49b235da1b6635d339f44",
+  "toolCalls": 94,
+  "violations": [
+    {
+      "tool": "Read",
+      "path": "/private/tmp/claude-502/-Users-joh-dev-ui-spec-language-isolated-control-port-01-work/653bbe1c-56cc-4577-b420-a85171b8556c/tasks"
+    }
+  ],
+  "clean": false
+}

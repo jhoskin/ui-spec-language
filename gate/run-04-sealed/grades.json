@@ -1,0 +1,471 @@
+{
+ "control-opus": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 0,
+   "why": "Answer says Done fully loaded with 8 cards; key says Done shows placeholders and 'Still loading…' is not yet shown... no cards yet"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "Only heading and placeholders, no other text, matches key"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 0,
+   "why": "Uses OR for labels (key requires both bug and ui), names no specific cards, and address is wrong"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 0,
+   "why": "Focus placed in Review, but key says SL-119 in In progress"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 0,
+   "why": "Notice text says 2 cards with Undo; key says 1 of 2 cards and max 3 labels"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 0.5,
+   "why": "Saving… mark and 1 request right, but position is second rather than third"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 0,
+   "why": "Window title and notice text differ from the key"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 0,
+   "why": "Focus wrong (key: Board heading) and notice has no full stop difference but focus is wrong"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 0.5,
+   "why": "No notice and 1 request right, but SL-101 should be first in Ready, not just 'second column'; Control+Z doing nothing not stated"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 1,
+   "why": "Address, focus and unchanged description all match"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 0,
+   "why": "Shows 'You · just now' instead of 'Mika Ito · 20 Nov 2026, 09:01'"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 0,
+   "why": "Message text differs from key and omits the 2 comments list; message wrong"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 0,
+   "why": "Says history gained 1 entry via going back; key says 2 more entries from a new entry"
+  }
+ },
+ "sonnet": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 1,
+   "why": "Done shows placeholders and \"Still loading…\", as in the key"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "No text besides heading and placeholders; \"Still loading…\" not yet shown"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 1,
+   "why": "SL-109 and SL-114 shown, address matches exactly"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 1,
+   "why": "SL-119, last card of In progress"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 1,
+   "why": "Notice text matches the key"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 1,
+   "why": "Third in Ready, \"Saving…\" mark, one move request"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 1,
+   "why": "Old title, window title and error notice with Retry all match"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 1,
+   "why": "Address #/, focus on the Board heading, \"Deleted SL-114.\" with Undo"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 1,
+   "why": "No notice, SL-101 first in Ready, one move request"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 1,
+   "why": "Address, focus on Edit description and old description match"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 1,
+   "why": "Comment line matches exactly"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 1,
+   "why": "Text back in the focused field and the message matches; the comment is removed, so 2 remain"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 1,
+   "why": "Address #/, two more history entries, focus on SL-102"
+  }
+ },
+ "opus": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 1,
+   "why": "Placeholders and \"Still loading…\" match the key"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "No other text shown, matching the key"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 1,
+   "why": "Cards SL-109 and SL-114 and the address match"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 1,
+   "why": "SL-119 matches"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 1,
+   "why": "Notice text matches the key"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 1,
+   "why": "Position, mark and one request all match"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 1,
+   "why": "Title, window title and notice match; an extra Dismiss action does not contradict the key"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 1,
+   "why": "Address, focus and notice match"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 1,
+   "why": "No notice, SL-101 first, one request"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 1,
+   "why": "Address, focus and description match"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 1,
+   "why": "Line matches exactly"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 1,
+   "why": "Field text, focus and message match"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 1,
+   "why": "Address, two more history entries and focus match"
+  }
+ },
+ "control-haiku": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 0,
+   "why": "Says Done is fully loaded with cards; key says it shows placeholders and still loading"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "Only heading and placeholders, matches key"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 0,
+   "why": "Does not decide; no cards or correct address given"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 0,
+   "why": "Does not identify SL-119; says cannot be determined and wrongly describes Review"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 0,
+   "why": "Notice text wrong; key says Added \"docs\" to 1 of 2 cards, max 3 labels"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 0.5,
+   "why": "Move count and pending mark right, but position vague/wrong (Ready third card, not named; 'Saving…' not exact)"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 0.5,
+   "why": "Title rollback right, but window title and notice text not matching exactly"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 0.5,
+   "why": "Address and notice right, but focus should be the Board heading, not 'board region'"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 0.5,
+   "why": "Notice gone and one request right, but SL-101 location wrong (key: first in Ready)"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 0.5,
+   "why": "Address, focus and unchanged description right, but old description text not quoted; acceptable but incomplete"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 0,
+   "why": "Shows 'You · just now' instead of 'Mika Ito · 20 Nov 2026, 09:01'"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 0.5,
+   "why": "Field text and focus right, but message wording differs and 2 comments not stated"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 0,
+   "why": "History change wrong: key says two more entries, answer says one"
+  }
+ },
+ "control-sonnet": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 0,
+   "why": "Answer says Done shows loaded cards; key says placeholders and no cards yet"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "Says no, only heading and placeholders, no other text"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 0.5,
+   "why": "Filter description right but cards not named and address wrong"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 0,
+   "why": "Says SL-127 keeps focus; key says SL-119"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 0,
+   "why": "Notice text differs; key is Added docs to 1 of 2 cards, max 3 labels"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 0.5,
+   "why": "Saving mark and 1 request right but position/column vague, no Ready third card"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 0,
+   "why": "Notice text and window title do not match key"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 0,
+   "why": "Focus wrong (should be Board heading) and notice period missing is minor but focus is wrong"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 0.5,
+   "why": "Notice gone, one request, but SL-101 position described as column right not first in Ready explicitly"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 0.5,
+   "why": "Address and focus right; original description not quoted but implied, nothing saved not stated"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 0,
+   "why": "Shows relative 'You · 1 minute ago'; key is absolute Mika Ito line"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 0,
+   "why": "Message text differs from key and 2 comments not stated"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 0,
+   "why": "History change wrong; key says two more entries from start"
+  }
+ },
+ "qwen": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 1,
+   "why": "Placeholders and \"Still loading…\" shown, as the key says"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "No, matches the key"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 0,
+   "why": "Address is missing the \"?\" so the string does not match exactly"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 1,
+   "why": "SL-119 is correct"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 0.5,
+   "why": "Gives only the second sentence and omits 'Added \"docs\" to 1 of 2 cards.'"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 1,
+   "why": "Ready, third position, \"Saving…\", 1 request all match"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 1,
+   "why": "Title, window title and notice with Retry all match"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 0,
+   "why": "Focus should be the \"Board\" heading, not \"place title\""
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 0,
+   "why": "SL-101 should be first in Ready and only 1 request was sent"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 1,
+   "why": "Address, focus and description all match"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 1,
+   "why": "Line matches exactly"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 1,
+   "why": "Text, focused field and message all match"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 0,
+   "why": "Focus should be on card SL-102, not \"place title\""
+  }
+ },
+ "haiku": {
+  "PRB-001": {
+   "n": 1,
+   "grade": 1,
+   "why": "Placeholders and 'Still loading…' match the key"
+  },
+  "PRB-002": {
+   "n": 2,
+   "grade": 1,
+   "why": "Answers No, only heading and placeholders, as the key does"
+  },
+  "PRB-010": {
+   "n": 3,
+   "grade": 1,
+   "why": "Cards SL-109 and SL-114 and the address match"
+  },
+  "PRB-012": {
+   "n": 4,
+   "grade": 1,
+   "why": "SL-119, last card of In progress"
+  },
+  "PRB-018": {
+   "n": 5,
+   "grade": 1,
+   "why": "Notice text matches exactly"
+  },
+  "PRB-020": {
+   "n": 6,
+   "grade": 1,
+   "why": "Ready, third position, 'Saving…', one request"
+  },
+  "PRB-027": {
+   "n": 7,
+   "grade": 1,
+   "why": "Title, window title and notice match; Retry present"
+  },
+  "PRB-034": {
+   "n": 8,
+   "grade": 1,
+   "why": "Address #/, focus on Board heading, notice with Undo"
+  },
+  "PRB-036": {
+   "n": 9,
+   "grade": 1,
+   "why": "No notice, SL-101 first, one request"
+  },
+  "PRB-043": {
+   "n": 10,
+   "grade": 1,
+   "why": "Address, description and focus on Edit description match"
+  },
+  "PRB-045": {
+   "n": 11,
+   "grade": 1,
+   "why": "Line matches exactly"
+  },
+  "PRB-046": {
+   "n": 12,
+   "grade": 1,
+   "why": "Text, focus and message match the key"
+  },
+  "PRB-052": {
+   "n": 13,
+   "grade": 1,
+   "why": "Address #/, two new history entries, focus on SL-102"
+  }
+ }
+}

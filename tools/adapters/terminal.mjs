@@ -262,6 +262,14 @@ export function createTerminalAdapter({ command } = {}) {
       }
       const area = screen.rect(p.rect);
       const shown = p.role === "text" ? p.text ?? p.name : p.name;
+      if (p.role === "card") {
+        // TRM-14 puts the marks between the identifier and the title, so the two are checked apart.
+        const [id, ...title] = String(p.name).split(" ");
+        if (!painted(area, id) || !painted(area, title.join(" "))) {
+          bad.push(`card "${p.name}" is not painted in its rect`);
+        }
+        continue;
+      }
       if (p.role !== "placeholder" && !painted(area, shown)) {
         bad.push(`${p.role} "${String(shown).slice(0, 40)}" is not painted in its rect`);
       }
@@ -327,6 +335,8 @@ export function createTerminalAdapter({ command } = {}) {
       const texts = [];
       for (const p of d.parts) {
         if (p.role === "text" || p.role === "mark") texts.push(p.text ?? p.name);
+        // The web adapter gives the identifier and the title of a card as two texts.
+        else if (p.role === "card") texts.push(p.name.split(" ")[0], p.name.split(" ").slice(1).join(" "));
         else if (p.role !== "field" && p.role !== "placeholder") texts.push(p.name);
       }
       for (const c of d.cards) texts.push(...c.marks);

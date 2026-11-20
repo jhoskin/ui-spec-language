@@ -1,0 +1,89 @@
+{
+ "answers": [
+  {
+   "id": "PRB-001",
+   "answer": "The Done column shows its loaded cards (eight cards, SL-120 to SL-127 region), no longer placeholders",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-002",
+   "answer": "No, only the heading and loading placeholders (skeletons) are shown; no other text",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-010",
+   "answer": "Only cards that have both labels \"ui\" and \"bug\" and are assigned to Mika Ito or Ana Ruiz are shown; the address is #/?label=ui,bug&assignee=Mika Ito,Ana Ruiz",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-012",
+   "answer": "SL-127 keeps focus; ArrowLeft moves to the card in the previous column at the same position (the eighth card of In Review, or its last card if fewer)",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-018",
+   "answer": "Notice: \"Labeled 2 cards docs\" with an \"Undo\" action",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-020",
+   "answer": "SL-102 is shown in the column one to the right, at the position one lower than where it started, carrying a pending/saving mark (\"Saving…\"); 1 move request sent",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-027",
+   "answer": "Title reverts to the original SL-114 title; window title shows the original title (e.g. \"SL-114 · original title – Slate\"); notice: \"Could not save title. Changes were reverted.\" with a \"Retry\" action",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-034",
+   "answer": "Address is #/ (board); focus returns to the board (the card list, on the neighbouring card or column where SL-114 was); notice: \"Deleted SL-114\" with an \"Undo\" action",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-036",
+   "answer": "No, the notice has expired after 8000 ms and is no longer shown; SL-101 stays in the column it was moved to (the column right of its start); Ctrl+Z does nothing, so 1 move request was sent",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-043",
+   "answer": "Address stays #/card/SL-114; focus returns to the \"Edit description\" button; the original description is shown (\"zzz\" discarded)",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-045",
+   "answer": "\"You · 1 minute ago\" (author line with relative time; text is saved trimmed as \"First note\")",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-046",
+   "answer": "The comment field still contains \"this is Flaky\"; focus is in the comment field; an error message such as \"Could not post comment. Try again.\" is shown",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-052",
+   "answer": "Address returns to #/ (board); history gains 1 entry compared with the start (card entry pushed, Escape closes it by going back/replacing, net count unchanged at 1 extra if pushed); focus returns to card SL-102 on the board",
+   "basis": "GUESS",
+   "cites": []
+  }
+ ],
+ "ambiguities": [
+  "No specification was provided, so every answer is a convention-based guess.",
+  "Whether label filters combine with AND or OR is not given.",
+  "Whether Escape closes the card view by going back in history or by pushing a new entry is not given."
+ ],
+ "contradictions": [],
+ "toolCalls": 0
+}

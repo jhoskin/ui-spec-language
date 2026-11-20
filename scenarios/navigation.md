@@ -118,4 +118,18 @@ Then scroll is not top.
 When open-home.
 Then scroll is top.
 Then card SL-110 is not selected.
+
+SCN-NAV-9 [terminal] verifies NAV-1, DAT-16, MIS-1
+Given start at address "board?who=none,zed,ana&labels=ui,nope,bug&x=1&q=%20fix%20%20login".
+After 2200 ms.
+Then address is "board?q=fix+login&labels=bug,ui&who=ana,none".
+Given start at address "card/sl-114".
+Then address is "card/SL-114".
+Given start at address "nowhere".
+Then place title "Page not found".
+Then text "The address may be mistyped or out of date." is shown.
+Then address is "nowhere".
+When open-board-link.
+Then address board.
+Then place title "Board".
 ```

@@ -1,0 +1,159 @@
+{
+ "answers": [
+  {
+   "id": "PRB-001",
+   "answer": "Done is in Column.Loading.Slow: heading \"Done\", three placeholder cards, then the quiet text \"Still loading…\". The slow mark is due at 400+1000 = 1400 ms. The Done reply only comes at 400+1800 = 2200 ms.",
+   "basis": "DERIVED",
+   "cites": [
+    "COL-1",
+    "FIX-12",
+    "FIX-L1",
+    "FIX-L2",
+    "SCN-BRD-1"
+   ]
+  },
+  {
+   "id": "PRB-002",
+   "answer": "No. At 1399 ms Done is still Loading.Fresh: heading \"Done\" and three placeholder cards. \"Still loading…\" is not shown yet.",
+   "basis": "DERIVED",
+   "cites": [
+    "COL-1",
+    "FIX-12",
+    "SCN-BRD-1"
+   ]
+  },
+  {
+   "id": "PRB-010",
+   "answer": "Only SL-109 and SL-114 are shown. The labels bug and ui match SL-106, SL-109, SL-111 and SL-114. The assignees Ana Ruiz and Mika Ito then keep SL-109 (Ana) and SL-114 (Mika). The address is #/?labels=bug,ui&who=ana,mika. Labels and people are written in board order, not in click order.",
+   "basis": "DERIVED",
+   "cites": [
+    "DAT-5",
+    "DAT-16",
+    "FLT-4",
+    "FLT-5",
+    "FLT-8",
+    "WEB-1",
+    "FIX-5"
+   ]
+  },
+  {
+   "id": "PRB-012",
+   "answer": "SL-119 has focus. Review has no visible card, so the nearest column on the left is In progress. SL-127 is at position 8, In progress has only 2 cards, so the last card is taken.",
+   "basis": "DERIVED",
+   "cites": [
+    "FCS-2",
+    "FIX-4"
+   ]
+  },
+  {
+   "id": "PRB-018",
+   "answer": "Info notice \"Added \"docs\" to 1 of 2 cards. A card can have at most 3 labels.\" with no action. SL-109 already has 3 labels, so only SL-101 gets docs.",
+   "basis": "DERIVED",
+   "cites": [
+    "BLK-T3.4",
+    "BLK-4",
+    "DAT-13",
+    "WEB-6"
+   ]
+  },
+  {
+   "id": "PRB-020",
+   "answer": "SL-102 is at position 3 of Ready (Ready starts SL-111, SL-112, SL-102, SL-113). It carries the mark \"Saving…\" and keeps focus. 1 move request (moveCards) was sent. It was sent at the drop, and no notice shows yet.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-2",
+    "CRY-T1.3",
+    "MOV-1",
+    "FIX-L5"
+   ]
+  },
+  {
+   "id": "PRB-027",
+   "answer": "The old title \"Card title overflows on narrow screens\" is shown again. The window title is \"SL-114 Card title overflows on narrow screens · Slate\". The notice is Error \"Couldn't save the title of SL-114.\" with the action \"Retry\" (plus the \"Dismiss\" action of every error notice).",
+   "basis": "DERIVED",
+   "cites": [
+    "TTL-T1.4",
+    "TTL-4",
+    "FIX-14",
+    "WEB-2",
+    "Notice.Error face"
+   ]
+  },
+  {
+   "id": "PRB-034",
+   "answer": "The address is the board address \"#/\" with no filter. The history goes back one entry; no entry is added. Focus is on the place title \"Board\", because the deleted card is not visible. The notice is Info \"Deleted SL-114.\" with the action \"Undo\".",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-T1.1",
+    "DEL-1",
+    "NAV-T1.3",
+    "OPN-1"
+   ]
+  },
+  {
+   "id": "PRB-036",
+   "answer": "No notice is shown. The move notice was raised at 400 ms and ended at 8400 ms. Control+Z then does nothing, because the notice has no \"Undo\". SL-101 stays in Ready at position 1 (top), before SL-111. 1 move request was sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-1",
+    "NTC-2",
+    "NTC-5",
+    "CRY-2",
+    "CRY-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-043",
+   "answer": "The address stays #/card/SL-114. Focus is on the action \"Edit description\". The old description \"A long title pushes the labels out of the card.\" is shown, and no save request was sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "DIS-T1.6",
+    "DSC-3",
+    "DSC-5",
+    "FIX-5"
+   ]
+  },
+  {
+   "id": "PRB-045",
+   "answer": "\"Mika Ito · 20 Nov 2026, 09:01\". The reply comes at 65.2 s after the start, which is 09:01:05 and is shown to the minute. The comment text is \"First note\" without the outer spaces.",
+   "basis": "DERIVED",
+   "cites": [
+    "CMT-2",
+    "CMT-3",
+    "DAT-9",
+    "DAT-17",
+    "FIX-6",
+    "FIX-10"
+   ]
+  },
+  {
+   "id": "PRB-046",
+   "answer": "The comment field holds \"this is Flaky\" and is enabled. Focus is on the field \"Add a comment\". The message \"Couldn't add the comment. Your text is back in the field.\" shows as an alert. The comment and its count are removed, and no notice is raised.",
+   "basis": "STATED",
+   "cites": [
+    "CMT-T1.1",
+    "FIX-14"
+   ]
+  },
+  {
+   "id": "PRB-052",
+   "answer": "The address is the board address \"#/\" with no filter. The history has 2 more entries than at the start: 1 for the entered card address and 1 for the new Board entry from going up. Focus is on card SL-102.",
+   "basis": "DERIVED",
+   "cites": [
+    "NAV-3",
+    "DIS-T1.8",
+    "NAV-T3.2",
+    "NAV-T1.2",
+    "MEM-T1"
+   ]
+  }
+ ],
+ "ambiguities": [
+  "PRB-052: NAV-T1.2 says \"the card of that place is visible\" without defining \"that place\". I read it as the card place just left, so focus goes to SL-102. Row 4 (place title) is the other reading.",
+  "PRB-052: NAV-T1.2 says \"scroll ... not changed for a new entry\", while NAV-T3.2 says the filter comes from when Board was last shown. Here the board was shown with no filter, so this does not change the answer.",
+  "PRB-018: BLK-4 only gives a count example for \"X of Y cards\" with 3 selected. Here the counts are 1 of 2 by analogy.",
+  "PRB-001: the slow mark time depends on reading \"1000 ms after its request\" as 400+1000, not 1000 from the start. FIX-L2 supports this."
+ ],
+ "contradictions": [],
+ "toolCalls": 0
+}

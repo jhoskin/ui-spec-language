@@ -1,0 +1,91 @@
+{
+ "answers": [
+  {
+   "id": "PRB-001",
+   "answer": "Done has just finished loading: it shows its 8 cards (SL-120 to SL-127 in order) and a count of 8, with no loading placeholders left",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-002",
+   "answer": "No. Done shows only its heading and loading skeleton placeholders",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-010",
+   "answer": "Labels combine with OR inside their group, assignees combine with OR inside theirs, and the two groups combine with AND. Shown: every card labelled ui or bug whose assignee is Mika Ito or Ana Ruiz. Address: #/?labels=ui,bug&assignees=mika-ito,ana-ruiz",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-012",
+   "answer": "Focus goes to the card in the Review column at the same position. If Review has fewer than 8 cards, focus goes to its last card",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-018",
+   "answer": "\"Added label docs to 2 cards\", with one action: Undo",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-020",
+   "answer": "SL-102 sits one column to the right, at the second position. It carries a \"Saving…\" mark. 1 move request was sent",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-027",
+   "answer": "The original SL-114 title is shown again. Window title: \"SL-114 · <original title> — Slate\". Notice: \"Couldn't save title. Change reverted.\" with one action: Retry",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-034",
+   "answer": "Address: #/. Focus is on the next card in SL-114's former column, or the column itself if none remains. Notice: \"Deleted SL-114\" with one action: Undo",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-036",
+   "answer": "No notice is shown, because it auto-dismissed and the undo window closed. SL-101 stays in the second column. 1 move request was sent",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-043",
+   "answer": "Address: #/card/SL-114. Focus is on the \"Edit description\" button. The original description is shown and \"zzz\" is discarded",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-045",
+   "answer": "\"You · just now\"",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-046",
+   "answer": "The field still contains \"this is Flaky\" and keeps focus. Message: \"Couldn't post comment.\" with one action: Retry",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-052",
+   "answer": "Address: #/. Escape goes back in history, so the history has 1 more entry than at the start (the forward entry #/card/SL-102 remains). Focus is on card SL-102 on the board",
+   "basis": "GUESS",
+   "cites": []
+  }
+ ],
+ "ambiguities": [
+  "No specification was provided, so every answer is a conventional guess",
+  "Whether filter values in the same group combine with AND or OR",
+  "Whether Escape on a detail view goes back in history or pushes #/",
+  "Whether Control+Z still undoes after the notice has dismissed",
+  "How long each column takes to load"
+ ],
+ "contradictions": [],
+ "toolCalls": 0
+}

@@ -1,0 +1,80 @@
+[
+ {
+  "from": "spec/app.md"
+ },
+ {
+  "from": "spec/appearance.md"
+ },
+ {
+  "from": "spec/conventions.md"
+ },
+ {
+  "from": "spec/data.md"
+ },
+ {
+  "from": "spec/modality/terminal.md"
+ },
+ {
+  "from": "spec/modality/web.md"
+ },
+ {
+  "from": "spec/places/board.md"
+ },
+ {
+  "from": "spec/places/card.md"
+ },
+ {
+  "from": "spec/places/missing.md"
+ },
+ {
+  "from": "spec/tasks.md"
+ },
+ {
+  "from": "fixture/data.json"
+ },
+ {
+  "from": "fixture/fixture.md"
+ },
+ {
+  "from": "fixture/harness.md"
+ },
+ {
+  "from": "fixture/service.json"
+ },
+ {
+  "from": "fixture/vectors.json"
+ },
+ {
+  "from": "scenarios/README.md"
+ },
+ {
+  "from": "scenarios/board-load.md"
+ },
+ {
+  "from": "scenarios/bulk.md"
+ },
+ {
+  "from": "scenarios/card.md"
+ },
+ {
+  "from": "scenarios/carry-move.md"
+ },
+ {
+  "from": "scenarios/comments.md"
+ },
+ {
+  "from": "scenarios/delete.md"
+ },
+ {
+  "from": "scenarios/filter.md"
+ },
+ {
+  "from": "scenarios/focus-selection.md"
+ },
+ {
+  "from": "scenarios/navigation.md"
+ },
+ {
+  "from": "sidecar/matrix.md"
+ }
+]
