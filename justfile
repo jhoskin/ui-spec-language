@@ -16,12 +16,25 @@ lint-js:
     deno lint
     deno fmt --check
 
-# Unit tests, service double vectors and browser tests of the reference build.
+# Unit tests, service double vectors and browser tests of the reference build, and tool tests.
 test:
-    node --test web/test
+    node --test web/test tools/test
 
 # Serve the reference build for a person, with real time.
 serve:
     python3 -m http.server 8000
 
-check: lint-md lint-js test
+# The trigger lint of the specification package.
+spec-lint:
+    node tools/lint.mjs
+
+# Public scenarios and the closure check on the web build.
+scenarios-web:
+    node tools/run.mjs --build web --quiet --out out/results-web.json
+    node tools/closure.mjs --build web
+
+# Generate trace.md from the results of the builds.
+trace:
+    node tools/trace.mjs
+
+check: lint-md lint-js test spec-lint scenarios-web trace
