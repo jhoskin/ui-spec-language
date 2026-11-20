@@ -62,6 +62,16 @@ const vectors = [
     ],
   },
   {
+    name: "the second move of SL-108 fails; the first and the third are saved",
+    profile: "default",
+    calls: [
+      { at: 0, op: "moveCards", args: { moves: [move("SL-108", "review", 0)] } },
+      { at: 400, op: "moveCards", args: { moves: [move("SL-108", "backlog", 7)] } },
+      { at: 800, op: "moveCards", args: { moves: [move("SL-108", "backlog", 7)] } },
+      { at: 1200, op: "loadColumn", args: { column: "review" } },
+    ],
+  },
+  {
     name: "a title with FLAKY in any case fails one time",
     profile: "default",
     calls: [

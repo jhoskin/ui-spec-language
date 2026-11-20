@@ -216,8 +216,9 @@ export function createApp({ clock, service, nav, onChange }) {
       cardShown();
     });
   }
-  function ensureComments(id) {
-    if (S.comments[id] && S.comments[id].status !== "failed") return;
+  // A failed load is sent again only by "Retry" (PRP-2).
+  function ensureComments(id, retry = false) {
+    if (S.comments[id] && !(retry && S.comments[id].status === "failed")) return;
     S.comments[id] = { status: "loading", items: [] };
     request("loadComments", { card: id }, (reply) => {
       if (!reply.ok) S.comments[id].status = "failed";
@@ -357,8 +358,9 @@ export function createApp({ clock, service, nav, onChange }) {
           label: "Retry",
           run: () => {
             if (!S.cards[id] || S.deleted.has(id)) return;
-            if (isFull(moves[0].column)) raise("info", fullText(moves[0].column));
-            else doMove(moves, ctx);
+            if (S.cards[id].column !== moves[0].column && isFull(moves[0].column)) {
+              raise("info", fullText(moves[0].column));
+            } else doMove(moves, ctx);
           },
         });
       } else raise("info", `Moved ${id} to ${columnName(moves[0].column)}.`, { label: "Undo", run: undo });
@@ -452,6 +454,7 @@ export function createApp({ clock, service, nav, onChange }) {
           S.boardFocus = id;
           focus(`card:${id}`);
         }
+        cardShown();
       },
     }, (reason) => reason !== "action" && sendDelete(id, pos));
   }
@@ -618,6 +621,11 @@ export function createApp({ clock, service, nav, onChange }) {
       }
     },
 
+    // The view reports that a card took focus (pointer or Tab). It becomes the one focus stop.
+    noteFocus(id) {
+      if (onBoard() && isVisible(id)) S.boardFocus = id;
+    },
+
     // selection
     toggleSelect(id) {
       if (!onBoard() || S.carry || !isVisible(id)) return;
@@ -672,7 +680,8 @@ export function createApp({ clock, service, nav, onChange }) {
     pickUp(id) {
       if (!onBoard() || S.carry || !isVisible(id) || S.cards[id].pending.move) return;
       const col = S.cards[id].column;
-      S.carry = { id, from: { col, index: orderOf(col).indexOf(id) }, at: { col, v: visibleIn(col).indexOf(id) } };
+      const v = visibleIn(col).indexOf(id);
+      S.carry = { id, from: { col, index: orderOf(col).indexOf(id), v }, at: { col, v } };
       S.boardFocus = id;
     },
     carry(dir) {
@@ -700,6 +709,8 @@ export function createApp({ clock, service, nav, onChange }) {
       const c = S.carry;
       if (!c) return;
       S.carry = null;
+      // The same column and the same position among the visible cards: nothing moves.
+      if (c.at.col === c.from.col && c.at.v === c.from.v) return;
       const order = orderOf(c.at.col).filter((id) => id !== c.id);
       const index = dropIndex(order, visibleIn(c.at.col, c.id), c.at.v);
       if (c.at.col === c.from.col && index === c.from.index) return;
@@ -764,9 +775,9 @@ export function createApp({ clock, service, nav, onChange }) {
           const stop = boardStop();
           focus(stop ? `card:${stop}` : "title");
         } else if (S.selection.length) S.selection = [];
-      } else if (r.place === "card") {
+      } else if (r.place === "card" && cardState(r.id) !== "Missing") {
         if (where === "title-field") intents.cancelTitle();
-        else if (where === "description-field") intents.cancelDescription();
+        else if (S.ui.editDescription) intents.cancelDescription();
         else if (where !== "comment-field") goUp();
       }
     },
@@ -865,10 +876,13 @@ export function createApp({ clock, service, nav, onChange }) {
       S.sending.add(id);
       S.ui.commentDraft = "";
       S.ui.commentError = "";
+      // The field and the action are disabled while the comment is sent, so no part has focus.
+      focus("none");
       request("addComment", { card: id, text }, (reply) => {
         S.sending.delete(id);
         if (reply.ok) {
           entry.at = reply.data.comment.at;
+          if (S.route.place === "card" && S.route.id === id) focus("comment-field");
           return;
         }
         list.items.splice(list.items.indexOf(entry), 1);
@@ -882,7 +896,7 @@ export function createApp({ clock, service, nav, onChange }) {
       });
     },
     retryComments() {
-      if (onCard() && S.comments[S.route.id]?.status === "failed") ensureComments(S.route.id);
+      if (onCard() && S.comments[S.route.id]?.status === "failed") ensureComments(S.route.id, true);
     },
   };
 

@@ -295,3 +295,13 @@ test("profiles: a failed column is partial, a failed board has Try again, an emp
   assert.equal(t.m().line.text, "This board has no cards yet.");
   assert.equal(t.m().filter.count, "0 cards");
 });
+
+test("pick up and drop with no carry step moves nothing, also under a filter", () => {
+  const t = rig().ready();
+  t.app.toggleLabelFilter("bug");
+  t.app.pickUp("SL-102");
+  t.app.drop();
+  t.app.clearFilters();
+  assert.equal(t.ids("backlog")[0], "SL-101");
+  assert.equal(t.ops().includes("moveCards"), false);
+});

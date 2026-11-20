@@ -116,6 +116,7 @@ test("comment: field off while sending; failure puts the text back in the field"
   assert.equal(t.m().comments.heading, "1 comment");
   assert.equal(t.m().comments.items[0].time, "20 Nov 2026, 09:00");
   assert.equal(t.m().comments.items[0].author, "Mika Ito");
+  assert.equal(t.fx.focus, "comment-field");
 });
 
 test("comments of SL-120 fail once; Retry loads them", () => {
@@ -174,4 +175,31 @@ test("notice stays across places; selection does not", () => {
   t.app.goUp();
   assert.equal(t.m().selection, null);
   assert.equal(t.m().notice.text, "Deleted SL-101.");
+});
+
+test("dismiss on the card place: an open description edit is cancelled before go up", () => {
+  const t = rig().ready();
+  t.app.openCard("SL-101");
+  t.app.editDescription();
+  t.app.descriptionText("draft");
+  t.app.dismiss("other");
+  assert.equal(t.m().place, "card");
+  assert.equal(t.m().editDescription, null);
+  assert.equal(t.m().description, "Let a user download every card on the board as one CSV file.");
+  t.app.commentText("kept");
+  t.app.dismiss("comment-field");
+  assert.equal(t.m().place, "card");
+  t.app.dismiss("other");
+  assert.equal(t.m().place, "board");
+});
+
+test("a failed comments load is sent again only by Retry", () => {
+  const t = rig().ready();
+  t.app.openCard("SL-120");
+  t.clock.advance(300);
+  t.app.goUp();
+  t.app.openCard("SL-120");
+  t.clock.advance(300);
+  assert.equal(t.m().comments.state, "Failed");
+  assert.equal(t.ops().filter((o) => o === "loadComments").length, 1);
 });

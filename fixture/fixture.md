@@ -72,6 +72,7 @@ fault is used when the reply is made.
 ```text
 FIX-14 Faults of profile "default":
   a  a move of SL-107 (in moveCards, that move only)
+  f  the second move of SL-108 (the first move of SL-108 is saved)
   b  saveTitle with a title that contains "flaky", in any letter case
   c  addComment with a text that contains "flaky", in any letter case
   d  deleteCard of SL-125
