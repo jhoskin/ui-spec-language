@@ -1,0 +1,49 @@
+{
+  "clockStart": "2026-11-20T09:00:00Z",
+  "currentUser": "mika",
+  "latency": {
+    "loadBoard": 400,
+    "loadColumn": 300,
+    "loadCard": 250,
+    "loadComments": 300,
+    "moveCards": 400,
+    "saveTitle": 400,
+    "saveDescription": 400,
+    "saveLabels": 300,
+    "saveAssignee": 300,
+    "addComment": 500,
+    "deleteCard": 400
+  },
+  "slow": [
+    { "op": "loadColumn", "where": { "column": "done" }, "latency": 1800 }
+  ],
+  "faults": {
+    "move-107": { "op": "moveCards", "item": { "card": "SL-107" }, "times": 1 },
+    "title-flaky": { "op": "saveTitle", "contains": { "title": "flaky" }, "times": 1 },
+    "comment-flaky": { "op": "addComment", "contains": { "text": "flaky" }, "times": 1 },
+    "delete-125": { "op": "deleteCard", "where": { "card": "SL-125" }, "times": 1 },
+    "comments-120": { "op": "loadComments", "where": { "card": "SL-120" }, "times": 1 },
+    "column-ready": { "op": "loadColumn", "where": { "column": "ready" }, "times": 1 },
+    "board": { "op": "loadBoard", "where": {}, "times": 1 },
+    "card": { "op": "loadCard", "where": {}, "times": 1 }
+  },
+  "profiles": {
+    "default": {
+      "data": "full",
+      "faults": ["move-107", "title-flaky", "comment-flaky", "delete-125", "comments-120"]
+    },
+    "column-down": {
+      "data": "full",
+      "faults": ["move-107", "title-flaky", "comment-flaky", "delete-125", "comments-120", "column-ready"]
+    },
+    "board-down": {
+      "data": "full",
+      "faults": ["move-107", "title-flaky", "comment-flaky", "delete-125", "comments-120", "board"]
+    },
+    "card-down": {
+      "data": "full",
+      "faults": ["move-107", "title-flaky", "comment-flaky", "delete-125", "comments-120", "card"]
+    },
+    "empty": { "data": "empty", "faults": [] }
+  }
+}

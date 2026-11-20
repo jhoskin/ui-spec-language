@@ -1,0 +1,493 @@
+{
+  "board": {
+    "name": "Slate"
+  },
+  "columns": [
+    {
+      "id": "backlog",
+      "name": "Backlog",
+      "limit": null
+    },
+    {
+      "id": "ready",
+      "name": "Ready",
+      "limit": null
+    },
+    {
+      "id": "progress",
+      "name": "In progress",
+      "limit": 3
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "limit": null
+    },
+    {
+      "id": "done",
+      "name": "Done",
+      "limit": null
+    }
+  ],
+  "people": [
+    {
+      "id": "ana",
+      "name": "Ana Ruiz"
+    },
+    {
+      "id": "ben",
+      "name": "Ben Okafor"
+    },
+    {
+      "id": "chloe",
+      "name": "Chloé Martin"
+    },
+    {
+      "id": "dev",
+      "name": "Dev Patel"
+    },
+    {
+      "id": "mika",
+      "name": "Mika Ito"
+    }
+  ],
+  "labels": [
+    "bug",
+    "ui",
+    "api",
+    "docs",
+    "perf",
+    "blocked"
+  ],
+  "cards": [
+    {
+      "id": "SL-101",
+      "column": "backlog",
+      "title": "Export board as CSV",
+      "description": "Let a user download every card on the board as one CSV file.",
+      "labels": [
+        "api"
+      ],
+      "assignee": null,
+      "comments": []
+    },
+    {
+      "id": "SL-102",
+      "column": "backlog",
+      "title": "Fix login redirect loop",
+      "description": "After a failed sign-in the page redirects to itself.",
+      "labels": [
+        "bug"
+      ],
+      "assignee": "ana",
+      "comments": [
+        {
+          "author": "ana",
+          "at": "2026-11-02T08:00:00Z",
+          "text": "I can reproduce this."
+        },
+        {
+          "author": "ben",
+          "at": "2026-11-03T13:13:00Z",
+          "text": "Is this still needed?"
+        }
+      ]
+    },
+    {
+      "id": "SL-103",
+      "column": "backlog",
+      "title": "Dark mode for the card view",
+      "description": "",
+      "labels": [
+        "ui"
+      ],
+      "assignee": "chloe",
+      "comments": []
+    },
+    {
+      "id": "SL-104",
+      "column": "backlog",
+      "title": "Rate limit the search API",
+      "description": "Limit each client to 30 searches per minute.",
+      "labels": [
+        "api",
+        "perf"
+      ],
+      "assignee": "dev",
+      "comments": [
+        {
+          "author": "chloe",
+          "at": "2026-11-04T09:26:00Z",
+          "text": "Moved the deadline to next week."
+        }
+      ]
+    },
+    {
+      "id": "SL-105",
+      "column": "backlog",
+      "title": "Write onboarding guide",
+      "description": "",
+      "labels": [
+        "docs"
+      ],
+      "assignee": null,
+      "comments": []
+    },
+    {
+      "id": "SL-106",
+      "column": "backlog",
+      "title": "Login page shows stale error",
+      "description": "The error from the last attempt stays after a good sign-in.",
+      "labels": [
+        "bug",
+        "ui"
+      ],
+      "assignee": "ben",
+      "comments": [
+        {
+          "author": "dev",
+          "at": "2026-11-05T14:39:00Z",
+          "text": "Looks good to me."
+        },
+        {
+          "author": "mika",
+          "at": "2026-11-06T10:52:00Z",
+          "text": "Needs a second review."
+        },
+        {
+          "author": "ana",
+          "at": "2026-11-07T15:05:00Z",
+          "text": "Waiting on the vendor."
+        }
+      ]
+    },
+    {
+      "id": "SL-107",
+      "column": "backlog",
+      "title": "Migrate avatars to object storage",
+      "description": "Move avatar files out of the database.",
+      "labels": [
+        "api"
+      ],
+      "assignee": "dev",
+      "comments": []
+    },
+    {
+      "id": "SL-108",
+      "column": "backlog",
+      "title": "Keyboard shortcuts cheat sheet",
+      "description": "",
+      "labels": [
+        "ui",
+        "docs"
+      ],
+      "assignee": "mika",
+      "comments": []
+    },
+    {
+      "id": "SL-109",
+      "column": "backlog",
+      "title": "Search results flicker on slow networks",
+      "description": "Results from an old query replace results from a new one.",
+      "labels": [
+        "bug",
+        "ui",
+        "perf"
+      ],
+      "assignee": "ana",
+      "comments": [
+        {
+          "author": "ben",
+          "at": "2026-11-08T11:18:00Z",
+          "text": "Added a test for this."
+        }
+      ]
+    },
+    {
+      "id": "SL-110",
+      "column": "backlog",
+      "title": "Archive cards older than a year",
+      "description": "",
+      "labels": [],
+      "assignee": null,
+      "comments": []
+    },
+    {
+      "id": "SL-111",
+      "column": "ready",
+      "title": "Fix login button focus ring",
+      "description": "The focus ring is cut off on the left side.",
+      "labels": [
+        "bug",
+        "ui"
+      ],
+      "assignee": "chloe",
+      "comments": []
+    },
+    {
+      "id": "SL-112",
+      "column": "ready",
+      "title": "Document the webhook API",
+      "description": "",
+      "labels": [
+        "api",
+        "docs"
+      ],
+      "assignee": "ben",
+      "comments": [
+        {
+          "author": "chloe",
+          "at": "2026-11-09T16:31:00Z",
+          "text": "See the linked report."
+        }
+      ]
+    },
+    {
+      "id": "SL-113",
+      "column": "ready",
+      "title": "Cache board queries",
+      "description": "Keep the last board reply for 30 seconds.",
+      "labels": [
+        "perf"
+      ],
+      "assignee": "dev",
+      "comments": []
+    },
+    {
+      "id": "SL-114",
+      "column": "ready",
+      "title": "Card title overflows on narrow screens",
+      "description": "A long title pushes the labels out of the card.",
+      "labels": [
+        "bug",
+        "ui"
+      ],
+      "assignee": "mika",
+      "comments": [
+        {
+          "author": "dev",
+          "at": "2026-11-10T12:44:00Z",
+          "text": "I can reproduce this."
+        },
+        {
+          "author": "mika",
+          "at": "2026-11-11T08:57:00Z",
+          "text": "Is this still needed?"
+        }
+      ]
+    },
+    {
+      "id": "SL-115",
+      "column": "ready",
+      "title": "Add audit log endpoint",
+      "description": "",
+      "labels": [
+        "api"
+      ],
+      "assignee": null,
+      "comments": []
+    },
+    {
+      "id": "SL-116",
+      "column": "ready",
+      "title": "Reduce bundle size",
+      "description": "",
+      "labels": [
+        "perf"
+      ],
+      "assignee": "ana",
+      "comments": []
+    },
+    {
+      "id": "SL-117",
+      "column": "ready",
+      "title": "Blocked: vendor SSO sandbox",
+      "description": "We wait for the vendor to open a sandbox account.",
+      "labels": [
+        "blocked"
+      ],
+      "assignee": "ben",
+      "comments": [
+        {
+          "author": "ana",
+          "at": "2026-11-12T13:10:00Z",
+          "text": "Moved the deadline to next week."
+        },
+        {
+          "author": "ben",
+          "at": "2026-11-13T09:23:00Z",
+          "text": "Looks good to me."
+        },
+        {
+          "author": "chloe",
+          "at": "2026-11-14T14:36:00Z",
+          "text": "Needs a second review."
+        },
+        {
+          "author": "dev",
+          "at": "2026-11-15T10:49:00Z",
+          "text": "Waiting on the vendor."
+        }
+      ]
+    },
+    {
+      "id": "SL-118",
+      "column": "progress",
+      "title": "Bulk edit labels",
+      "description": "Add or remove one label on many cards at once.",
+      "labels": [
+        "ui"
+      ],
+      "assignee": "mika",
+      "comments": [
+        {
+          "author": "mika",
+          "at": "2026-11-16T15:02:00Z",
+          "text": "Added a test for this."
+        }
+      ]
+    },
+    {
+      "id": "SL-119",
+      "column": "progress",
+      "title": "Fix crash on empty board",
+      "description": "A board with no cards throws on first paint.",
+      "labels": [
+        "bug"
+      ],
+      "assignee": "ana",
+      "comments": []
+    },
+    {
+      "id": "SL-120",
+      "column": "done",
+      "title": "Set up CI pipeline",
+      "description": "",
+      "labels": [],
+      "assignee": "dev",
+      "comments": [
+        {
+          "author": "ana",
+          "at": "2026-11-17T11:15:00Z",
+          "text": "See the linked report."
+        },
+        {
+          "author": "ben",
+          "at": "2026-11-18T16:28:00Z",
+          "text": "I can reproduce this."
+        }
+      ]
+    },
+    {
+      "id": "SL-121",
+      "column": "done",
+      "title": "Design label colours",
+      "description": "",
+      "labels": [
+        "ui"
+      ],
+      "assignee": "chloe",
+      "comments": []
+    },
+    {
+      "id": "SL-122",
+      "column": "done",
+      "title": "Login with single sign-on",
+      "description": "",
+      "labels": [
+        "api"
+      ],
+      "assignee": "ben",
+      "comments": [
+        {
+          "author": "chloe",
+          "at": "2026-11-02T12:41:00Z",
+          "text": "Is this still needed?"
+        }
+      ]
+    },
+    {
+      "id": "SL-123",
+      "column": "done",
+      "title": "Fix typo in welcome email",
+      "description": "",
+      "labels": [
+        "bug",
+        "docs"
+      ],
+      "assignee": "mika",
+      "comments": []
+    },
+    {
+      "id": "SL-124",
+      "column": "done",
+      "title": "Measure search latency",
+      "description": "",
+      "labels": [
+        "perf"
+      ],
+      "assignee": "dev",
+      "comments": []
+    },
+    {
+      "id": "SL-125",
+      "column": "done",
+      "title": "Remove legacy export",
+      "description": "Delete the old XML export.",
+      "labels": [
+        "api"
+      ],
+      "assignee": null,
+      "comments": []
+    },
+    {
+      "id": "SL-126",
+      "column": "done",
+      "title": "Card detail page",
+      "description": "One page per card, with its own address.",
+      "labels": [
+        "ui"
+      ],
+      "assignee": "chloe",
+      "comments": [
+        {
+          "author": "dev",
+          "at": "2026-11-03T08:54:00Z",
+          "text": "Moved the deadline to next week."
+        },
+        {
+          "author": "mika",
+          "at": "2026-11-04T13:07:00Z",
+          "text": "Looks good to me."
+        },
+        {
+          "author": "ana",
+          "at": "2026-11-05T09:20:00Z",
+          "text": "Needs a second review."
+        },
+        {
+          "author": "ben",
+          "at": "2026-11-06T14:33:00Z",
+          "text": "Waiting on the vendor."
+        },
+        {
+          "author": "chloe",
+          "at": "2026-11-07T10:46:00Z",
+          "text": "Added a test for this."
+        }
+      ]
+    },
+    {
+      "id": "SL-127",
+      "column": "done",
+      "title": "Board loads twice on Back",
+      "description": "",
+      "labels": [
+        "bug",
+        "perf"
+      ],
+      "assignee": "ana",
+      "comments": []
+    }
+  ]
+}
