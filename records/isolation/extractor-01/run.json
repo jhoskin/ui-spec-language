@@ -1,0 +1,67 @@
+{
+  "role": "extractor",
+  "run": "01",
+  "model": "sonnet",
+  "tools": "Read,Write,Edit,Glob,Grep,Bash",
+  "started": "2026-11-20T13:39:24.644Z",
+  "ended": "2026-11-20T13:53:27.204Z",
+  "promptSha256": "feec785e1ba3bb3ebdcc8eac4af4f1964cffc56e17cc69ba58bdea899be1217c",
+  "manifest": [
+    {
+      "path": "web/index.html",
+      "sha256": "6c8e75f76a666346a0b0983d6756535a1269decba4abd498d35459d28c482fe8"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "01c98b971e6d3b629f3874b9284fba845d6c993dd4f9065aa62b1647f974772d"
+    },
+    {
+      "path": "web/src/app.js",
+      "sha256": "56613602d0d984f4e02df4c6565091348310d2f30d66e3f00c72e197732958ac"
+    },
+    {
+      "path": "web/src/core.js",
+      "sha256": "16a671b9b7fb5f5fe05684094a0234fefb83dcac57972d30c2957c43ad34023a"
+    },
+    {
+      "path": "web/src/main.js",
+      "sha256": "cfa4c27147819f7cc2b77afcbb52d470e15cdd0a9a6de92e0864c4c0f33083f5"
+    },
+    {
+      "path": "web/src/view.js",
+      "sha256": "29c1bcad533417bf5634aa3d3d42b5ada0421608d1ac5b3c5f63dac8ddb6fc04"
+    },
+    {
+      "path": "web/src/double/clock.js",
+      "sha256": "c907413ccf1760377398ae42ef050379b93ead04e5744e79241cd2ccca506654"
+    },
+    {
+      "path": "web/src/double/service.js",
+      "sha256": "b085e2264ef0a64475df78f40cf2b150662558c93d26a5fce7a868c7acd67ba4"
+    },
+    {
+      "path": "fixture/data.json",
+      "sha256": "a6b159ceece3c05adbdf6d74359557b76c81a1b6867ef7c60d871d829f67791e"
+    },
+    {
+      "path": "fixture/service.json",
+      "sha256": "62e017f53ea063985c891fd72a9e36d3a903470a3f22853ed7b8004736e4163f"
+    },
+    {
+      "path": "fixture/fixture.md",
+      "sha256": "7de3926505f1114b3c0fcfa34b87c995cb12d2a2a5b003b8621b5ee4addd5c9d"
+    },
+    {
+      "path": "spec/conventions.md",
+      "sha256": "4ad4c60b718420dc903e3495b655e726db32d69d33b4ab599145d096618c5c9e"
+    },
+    {
+      "path": "driver-guide.md",
+      "sha256": "343c1935f49c5b0b5b0cc56c84822c15114e306435ee921b73772421838a6cf2"
+    }
+  ],
+  "transcriptSha256": "e8da95f133a5c5faec473fb4b1d81dbeb73ce8b9ff90062e2f293b19ae800d58",
+  "toolCalls": 67,
+  "violations": [],
+  "clean": true
+}

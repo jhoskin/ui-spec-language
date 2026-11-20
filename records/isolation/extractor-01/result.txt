@@ -1,0 +1,60 @@
+I wrote `extraction/app.md`, `extraction/board.md` and `extraction/card.md`. I checked the main behaviours on the running app with the driver, using the default, `column-down`, `board-down`, `card-down` and `empty` profiles. A few rules come from reading the code only and are marked "(code)" in the files:
+- the title being dropped when you leave the field with an invalid draft;
+- saves with no failure handling (labels, assignee, description);
+- the description editor staying open when you leave the textarea.
+
+These are the 15 decisions I think an implementer is most likely to get wrong:
+
+1. **The delete request is sent late.** "Deleted SL-102." is a notice with Undo, and `deleteCard` goes out only when that notice ends. That happens at 8000 ms, or when any other notice replaces it. Undo sends nothing. Retry after a failed delete sends at once and shows no notice.
+2. **Info notices last 8000 ms and error notices never time out.** Only Dismiss, Retry or a replacing notice ends an error. One notice exists at a time, a new one replaces the old, and it survives every change of place.
+3. **Filter timing and what each trigger applies.**
+   - The text field applies after 250 ms and replaces the address without adding history.
+   - Toggles, Enter, Escape and "Clear filters" apply at once and also pick up the typed text.
+   - Every apply cancels a carry, deselects cards that are now hidden, and announces the count.
+   - Enter with exactly one visible card focuses it.
+4. **Escape on the board is a first-match table.**
+   - Carrying: cancel the carry.
+   - Filter field with text: clear the text.
+   - Filter field empty: focus the focus-stop card.
+   - Selection present: clear it.
+   - Otherwise: nothing.
+5. **Where a card lands when dropped under a filter.** At the top of the visible list it goes to the very top of the column. Otherwise it goes directly after the visible card above it, so hidden cards stay below it. A keyboard carry moves among the other visible cards and doesn't wrap.
+6. **The In progress limit counts hidden cards.** A drop into a full column from another column is refused with "In progress is full (3 cards)." and sends nothing. Reordering inside the full column is allowed.
+7. **Bulk moves work in board order.**
+   - Candidates exclude cards already in the target.
+   - Only as many as fit are moved, appended to the end of the target.
+   - Moved cards are deselected and the rest stay selected.
+   - The notice reads "Moved 1 of 3 cards to In progress. In progress is full (3 cards)." The "of 3" counts candidates, not the selection.
+   - Failed cards go back and are selected again.
+8. **Focus after things vanish.** When the focused part disappears, focus goes to the same kind of part if one still exists, otherwise to the place title. Examples: "Clear selection", "Dismiss", "Try again" and column "Retry" all land on the "Board" title.
+   - A Card in Loading has no title, so focus is none and is never set later.
+9. **Navigation depends on how the card was opened.** Up-link, Escape and delete-from-card go one step back, with the depth unchanged, only if the card was opened from the board. Otherwise they add a Board entry, or replace the current entry for delete. After "Back" the previously open card gets focus and the scroll is restored. Cold start gives no focus at all.
+10. **Address handling.**
+    - Card ids are upper-cased.
+    - The last duplicate key wins.
+    - A broken `%`-code is ignored.
+    - Values are case-sensitive: `labels=Bug` is dropped.
+    - Labels and people are rewritten in board order with `+` for spaces, in place, without a new entry.
+    - Text after `#/card/<ID>` becomes part of the id: `#/card/SL-114#x` gives "Card not found". A `?` tail is dropped.
+11. **A reload restarts the service, so all edits are gone.** The address survives, and nothing else does. Back, Forward and entered addresses keep session data and the notice but reset selection, carry and drafts.
+12. **Title save rules.**
+    - Squash whitespace and allow 1 to 80 characters; 80 is accepted and 81 is not.
+    - The title shows at once with "Saving…".
+    - A failure rolls the old title back and raises a Retry notice.
+    - Leaving the field with a valid draft saves it, and an invalid draft is dropped silently.
+    - Escape cancels and does not leave the place.
+13. **A comment is added optimistically.** It appears last as "Mika Ito · Sending…" and the field is emptied and disabled. At 500 ms it becomes "20 Nov 2026, 09:00". On failure the text returns to the field with the alert "Couldn't add the comment. Your text is back in the field." and focus on the field. If you have left the card, an error notice appears instead and the text is lost.
+14. **Loading and count line.**
+    - "Loading cards…" stays until every column has replied, ok or failed, and it is announced once as "27 cards".
+    - "Still loading…" appears at 1000 ms, which in the fixture only Done reaches.
+    - A failed column counts 0, giving "20 cards" under `column-down`.
+    - With zero cards in total the board line is "This board has no cards yet." even if a filter is active.
+    - An empty column under a filter reads "0 of 0 cards" with "No cards", while a column whose cards are all hidden reads "No matching cards".
+15. **Card place details.**
+    - A card at 3 labels disables the other toggles and shows "Label limit reached (3)".
+    - Labels and assignee save with no rollback.
+    - Description: Ctrl/Cmd+Enter saves and trims, and Escape cancels.
+    - An unknown card is "Card not found" after 250 ms, even before the board loads.
+    - Undo can restore a deleted card while its address shows "Card not found".
+
+I wrote a small helper, `tools/run.py`, in the work directory to run requests and summarise results; it is not part of the extraction.

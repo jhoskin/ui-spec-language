@@ -2,5 +2,6 @@
   // Default rules, line length off.
   "config": { "MD013": false },
   "globs": ["**/*.md"],
-  "ignores": ["node_modules", "tui/**/node_modules"]
+  // Text that an isolated role wrote is kept as it came. It is a record, not a document.
+  "ignores": ["node_modules", "records/extraction-second", "probes"]
 }
