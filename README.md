@@ -19,6 +19,15 @@ just setup
 This installs the one development dependency (Playwright, with install scripts
 off) and downloads the Chromium build that it needs.
 
+## Run the reference build
+
+```sh
+just serve
+```
+
+Then open <http://localhost:8000/web/>. Slate runs on the fixture in
+`fixture/`. It has no back end, and a reload starts the data again.
+
 ## Check
 
 ```sh

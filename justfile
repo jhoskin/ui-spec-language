@@ -13,11 +13,15 @@ lint-md:
 
 # JavaScript lint and format check.
 lint-js:
-    deno lint web tools
-    deno fmt --check web tools
+    deno lint
+    deno fmt --check
 
-# Unit tests.
+# Unit tests, service double vectors and browser tests of the reference build.
 test:
-    node --test
+    node --test web/test
 
-check: lint-md
+# Serve the reference build for a person, with real time.
+serve:
+    python3 -m http.server 8000
+
+check: lint-md lint-js test
