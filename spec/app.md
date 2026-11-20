@@ -214,7 +214,7 @@ NTC-7 [should] origin: extracted  sets: Notice
 ```text
 FOC-1 [must] origin: extracted  sets: focus
   When the part that has focus is removed, Slate shall focus the same part if it is shown again
-  in the same change (a card that moved), and the place title if not. A rule that names a
+  in the same change (a card that moved or came back), and the place title if not. A rule that names a
   focus target for that change wins over this rule.
 ```
 
@@ -238,7 +238,8 @@ DIS-T1 [must] decides: the user dismisses  owns: -
   9 otherwise                                             nothing
 ```
 
-The dismiss intent does not end a notice.
+The dismiss intent does not end a notice. Title.Editing always has focus in the
+title field, because a move of focus out of the field ends the edit (TTL-3).
 
 ## Properties
 

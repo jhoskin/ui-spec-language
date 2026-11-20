@@ -34,7 +34,13 @@ export function packageText(root = REPO) {
       if (f.endsWith(".md") && !files.includes(p)) files.push(p);
     }
   }
-  files.push("spec/modality/web.md", "fixture/fixture.md");
+  files.push(
+    "spec/modality/web.md",
+    "fixture/fixture.md",
+    "fixture/harness.md",
+    "fixture/data.json",
+    "fixture/service.json",
+  );
   for (const f of readdirSync(join(root, "scenarios")).sort()) files.push(`scenarios/${f}`);
   return files.map((f) => `<file name="${f}">\n${readFileSync(join(root, f), "utf8")}\n</file>`).join("\n\n");
 }
@@ -87,6 +93,7 @@ const questions = (probes) =>
 
 const FORMAT = `Answer every question. Reply with one JSON object and nothing else:
 {"answers": [{"id": "PRB-001", "answer": "<what the user perceives, short and exact; quote strings exactly>", "basis": "STATED" | "DERIVED" | "GUESS", "cites": ["<identifiers>"]}], "ambiguities": ["<a place where the text can be read in two ways>"], "contradictions": ["<two statements that disagree, with their identifiers>"]}
+Give every fact that the question asks for, and no more. For a notice, give its exact text and name each of its actions. For a change of the history, give the number of entries compared with the start. For an order of cards, list the identifiers.
 basis: STATED if the text says it directly, DERIVED if you combined statements, GUESS if the text does not decide it.`;
 
 const readerPrompt = (pkg, probes) =>
@@ -101,7 +108,8 @@ const controlPrompt = (probes) =>
 
 const graderPrompt = (items) =>
   `You grade answers against a key. For each item, compare the answer with the key on the facts that the question asks for. Wording does not matter. A quoted string must match exactly, except for quote marks and a final full stop.
-Grade 1: every fact that the key gives for the question is in the answer, and nothing in the answer contradicts the key.
+Grade only the facts that the question asks for. A fact that the key adds beyond the question does not count against an answer that omits it. A correct extra fact in the answer does not count against it.
+Grade 1: every fact that the question asks for is in the answer as the key gives it, and nothing in the answer contradicts the key.
 Grade 0.5: part of the facts are right and none is wrong, or the answer is right but hedges between two outcomes.
 Grade 0: a fact is wrong, or the answer does not decide.
 Reply with one JSON object and nothing else: {"grades": [{"n": <item number>, "grade": 0 | 0.5 | 1, "why": "<one short clause>"}]}
@@ -127,11 +135,28 @@ async function askClaude(role, run, model, prompt) {
 }
 
 async function askOllama(model, prompt) {
+  try {
+    return await callOllama(model, prompt);
+  } catch (e) {
+    return { text: "", toolCalls: 0, error: String(e.message) };
+  }
+}
+
+async function callOllama(model, prompt) {
+  // The reply is read as a stream, so that a slow local model does not hit a time limit.
   const r = await fetch("http://127.0.0.1:11434/api/generate", {
     method: "POST",
-    body: JSON.stringify({ model, prompt, stream: false, format: "json", options: { num_ctx: 65536, temperature: 0 } }),
+    body: JSON.stringify({ model, prompt, stream: true, options: { num_ctx: 65536, temperature: 0 } }),
   });
-  return { text: (await r.json()).response ?? "", toolCalls: 0 };
+  let text = "";
+  let rest = "";
+  for await (const chunk of r.body) {
+    rest += Buffer.from(chunk).toString("utf8");
+    const lines = rest.split("\n");
+    rest = lines.pop();
+    for (const line of lines) if (line.trim()) text += JSON.parse(line).response ?? "";
+  }
+  return { text, toolCalls: 0 };
 }
 
 async function main() {
@@ -171,13 +196,22 @@ async function main() {
   for (const r of readers) {
     jobs.push((async () => {
       const prompt = readerPrompt(pkg, probes);
-      const out = r === "qwen"
-        ? await askOllama("qwen3.6:latest", prompt)
-        : await askClaude(`reader-${r}`, o.run, r, prompt);
+      const ask = (
+        text,
+        n,
+      ) => (r === "qwen" ? askOllama("qwen3.6:latest", text) : askClaude(`reader-${r}${n}`, o.run, r, text));
+      const out = await ask(prompt, "");
       answers[r] = {
         ...(parseJson(out.text) ?? { answers: [], unreadable: out.text.slice(0, 2000) }),
         toolCalls: out.toolCalls,
       };
+      // A reader that left questions out is asked one more time for those questions only.
+      const missing = probes.filter((p) => !answers[r].answers.some((a) => a.id === p.id && a.answer));
+      if (missing.length && missing.length < probes.length) {
+        const again = parseJson((await ask(readerPrompt(pkg, missing), "-again")).text);
+        answers[r].answers = [...answers[r].answers.filter((a) => a.answer), ...(again?.answers ?? [])];
+        answers[r].askedAgain = missing.map((p) => p.id);
+      }
       console.error(`reader ${r}: ${answers[r].answers.length} answers`);
     })());
     if (!o["no-controls"] && r !== "qwen") {

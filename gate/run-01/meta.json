@@ -1,0 +1,70 @@
+{
+  "run": "01",
+  "set": "open",
+  "date": "2026-11-20T14:10:42.049Z",
+  "probes": 39,
+  "mustProbes": 39,
+  "probeBankSha256": "508142991fb0f8d2d56785e7d08c6a90fd9417b7cd4add72d70814e0f1a9c0b6",
+  "packageSha256": "e351bfdfb7b8189f4a13cfd22eb58382021e86c9edda6383921ecc3cd90b3450",
+  "readers": [
+    "opus",
+    "sonnet",
+    "haiku",
+    "qwen"
+  ],
+  "gating": [
+    "opus",
+    "sonnet",
+    "haiku"
+  ],
+  "scores": {
+    "qwen": {
+      "all": 0,
+      "must": 0
+    },
+    "control-sonnet": {
+      "all": 18,
+      "must": 18
+    },
+    "control-haiku": {
+      "all": 7,
+      "must": 7
+    },
+    "control-opus": {
+      "all": 15.5,
+      "must": 15.5
+    },
+    "sonnet": {
+      "all": 37,
+      "must": 37
+    },
+    "opus": {
+      "all": 37.5,
+      "must": 37.5
+    },
+    "haiku": {
+      "all": 35,
+      "must": 35
+    }
+  },
+  "toolCalls": {
+    "qwen": 0,
+    "control-sonnet": 0,
+    "control-haiku": 0,
+    "control-opus": 0,
+    "sonnet": 0,
+    "opus": 0,
+    "haiku": 0
+  },
+  "mustBlocked": [
+    "PRB-009",
+    "PRB-017",
+    "PRB-019",
+    "PRB-025",
+    "PRB-028",
+    "PRB-035",
+    "PRB-048",
+    "PRB-049"
+  ],
+  "pass": false
+}

@@ -1,0 +1,445 @@
+{
+ "answers": [
+  {
+   "id": "PRB-003",
+   "answer": "Ready shows the failed state: the alert “Couldn't load Ready.” and an action “Retry” named “Retry Ready”, with no cards. The count line reads “20 cards”.",
+   "basis": "DERIVED",
+   "cites": [
+    "COL-2",
+    "COL-3",
+    "DAT-2",
+    "FIX-15",
+    "FIX-L2",
+    "FIX-4"
+   ]
+  },
+  {
+   "id": "PRB-004",
+   "answer": "The board is loaded and shows all 27 cards; the count line reads “27 cards”. Board loads requested in all: 2. Focus is on the place title “Board”.",
+   "basis": "DERIVED",
+   "cites": [
+    "BRD-3",
+    "BRD-1",
+    "FOC-1",
+    "PRP-2",
+    "FIX-16",
+    "FIX-14",
+    "FIX-12",
+    "DAT-2"
+   ]
+  },
+  {
+   "id": "PRB-005",
+   "answer": "Window title: “SL-102 Fix login redirect loop · Slate”. Card loads requested: 2 (the failed one and the one sent by “Try again”).",
+   "basis": "DERIVED",
+   "cites": [
+    "CRD-2",
+    "CRD-T1",
+    "WEB-2",
+    "FIX-17",
+    "PRP-2"
+   ]
+  },
+  {
+   "id": "PRB-006",
+   "answer": "The address is “#/”, because the filter is not applied yet. Backlog shows all 10 cards: SL-101, SL-102, SL-103, SL-104, SL-105, SL-106, SL-107, SL-108, SL-109, SL-110. The field shows “login fix”.",
+   "basis": "DERIVED",
+   "cites": [
+    "FLT-1",
+    "FLT-2",
+    "FLT-8",
+    "DAT-4",
+    "WEB-1"
+   ]
+  },
+  {
+   "id": "PRB-007",
+   "answer": "The address is “#/?q=login+fix”. The history did not grow; the current entry was rewritten. Backlog shows SL-102 and Ready shows SL-111.",
+   "basis": "DERIVED",
+   "cites": [
+    "FLT-2",
+    "FLT-8",
+    "DAT-4",
+    "DAT-5",
+    "DAT-16",
+    "WEB-1"
+   ]
+  },
+  {
+   "id": "PRB-008",
+   "answer": "Focus is on card SL-125 (“SL-125 Remove legacy export”), which is the only visible card. The filter applied at once.",
+   "basis": "DERIVED",
+   "cites": [
+    "FLT-3",
+    "DAT-5",
+    "FCS-1"
+   ]
+  },
+  {
+   "id": "PRB-009",
+   "answer": "The address is “#/?q=search+results&labels=bug,perf”; “nope” was dropped when the board data loaded. The history did not grow. Only SL-109 is shown, in Backlog, and the count line reads “1 of 27 cards”.",
+   "basis": "DERIVED",
+   "cites": [
+    "NAV-1",
+    "DAT-16",
+    "DAT-4",
+    "DAT-5",
+    "DAT-2",
+    "WEB-1"
+   ]
+  },
+  {
+   "id": "PRB-011",
+   "answer": "Focus is on SL-121 (“SL-121 Design label colours”), in Done at position 2. Review has no visible card, so the focus skips it.",
+   "basis": "DERIVED",
+   "cites": [
+    "FCS-2"
+   ]
+  },
+  {
+   "id": "PRB-013",
+   "answer": "Focus is on the action “Select all in Ready”, the next Tab stop after the focus stop SL-104.",
+   "basis": "DERIVED",
+   "cites": [
+    "FCS-2",
+    "WEB-6",
+    "WEB-5"
+   ]
+  },
+  {
+   "id": "PRB-014",
+   "answer": "The address is “#/”. Focus is on card SL-125 (“SL-125 Remove legacy export”).",
+   "basis": "DERIVED",
+   "cites": [
+    "FLT-7",
+    "DIS-T1.2",
+    "DIS-T1.3",
+    "FCS-1",
+    "FLT-8"
+   ]
+  },
+  {
+   "id": "PRB-015",
+   "answer": "0 cards are selected. The first Shift+X selected all 7 Ready cards, and the second removed them, so the selection bar is gone.",
+   "basis": "DERIVED",
+   "cites": [
+    "SEL-1",
+    "SEL-2"
+   ]
+  },
+  {
+   "id": "PRB-016",
+   "answer": "In progress holds SL-118, SL-119 and SL-101 (SL-101 at the end). The notice reads “Moved 1 of 3 cards to In progress. In progress is full (3 cards).” with the action “Undo”. SL-102 and SL-103 stay selected; the selection bar reads “2 selected”.",
+   "basis": "DERIVED",
+   "cites": [
+    "BLK-T1.3",
+    "BLK-T2.2",
+    "DAT-7",
+    "DAT-13",
+    "MOV-3",
+    "SEL-4"
+   ]
+  },
+  {
+   "id": "PRB-017",
+   "answer": "Notice: “Moved 2 of 3 cards to Review. Couldn't move SL-107.” with the action “Retry”. Selected: SL-107 only (“1 selected”). Backlog is SL-101, SL-102, SL-103, SL-104, SL-105, SL-109, SL-107, SL-110. Review is SL-106, SL-108.",
+   "basis": "DERIVED",
+   "cites": [
+    "BLK-T1.3",
+    "BLK-T2.1",
+    "DAT-8",
+    "FIX-14"
+   ]
+  },
+  {
+   "id": "PRB-019",
+   "answer": "2 cards are selected: SL-111 and SL-114. The other Ready cards were removed from the selection when the bug filter hid them and are not selected again.",
+   "basis": "DERIVED",
+   "cites": [
+    "SEL-4",
+    "FLT-4",
+    "FLT-8",
+    "FLT-6"
+   ]
+  },
+  {
+   "id": "PRB-021",
+   "answer": "SL-119 is in Review, at position 1. The notice reads “Moved SL-119 to Review.” with the action “Undo”.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-2",
+    "CRY-T1.3",
+    "MOV-1"
+   ]
+  },
+  {
+   "id": "PRB-022",
+   "answer": "SL-116 is still in Ready, at position 6 (Ready is SL-111 to SL-116). The notice reads “In progress is full (3 cards).” with no action. Move requests sent in all: 1 (for SL-117).",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-2",
+    "CRY-T1.2",
+    "DAT-7",
+    "MOV-1",
+    "NTC-1"
+   ]
+  },
+  {
+   "id": "PRB-023",
+   "answer": "Ready is SL-111, SL-112, SL-101, SL-113, SL-114, SL-115, SL-116, SL-117. The notice reads “Moved SL-101 to Ready.” with the action “Undo”.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-3",
+    "CRY-T1.3",
+    "MOV-1",
+    "WEB-8"
+   ]
+  },
+  {
+   "id": "PRB-024",
+   "answer": "The first four cards of Backlog are SL-101, SL-102, SL-111, SL-103.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-2",
+    "DAT-6",
+    "MOV-1",
+    "FLT-8"
+   ]
+  },
+  {
+   "id": "PRB-025",
+   "answer": "SL-107 is back in Backlog at position 7, between SL-106 and SL-108. Focus is on card SL-107 (“SL-107 Migrate avatars to object storage”). The notice reads “Couldn't move SL-107. It is back in Backlog.” with the action “Retry”.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-2",
+    "DAT-8",
+    "FOC-1",
+    "CRY-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-026",
+   "answer": "SL-107 is in Ready at position 7 (Ready is SL-111, SL-112, SL-113, SL-114, SL-115, SL-116, SL-107, SL-117). The notice reads “Moved SL-107 to Ready.” with the action “Undo”.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-2",
+    "CRY-T1.2",
+    "CRY-T1.3",
+    "MOV-1",
+    "NTC-4"
+   ]
+  },
+  {
+   "id": "PRB-028",
+   "answer": "SL-108 is in Ready at position 8, at the end after SL-117. The notice reads “Couldn't undo the move of SL-108.” with the action “Retry”.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-3",
+    "MOV-4",
+    "NTC-5",
+    "DAT-8",
+    "FIX-14"
+   ]
+  },
+  {
+   "id": "PRB-029",
+   "answer": "Focus is on card SL-109 (“SL-109 Search results flicker on slow networks”). No delete request is sent yet. The notice reads “Deleted SL-110.” with the action “Undo”.",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-1",
+    "DEL-2"
+   ]
+  },
+  {
+   "id": "PRB-030",
+   "answer": "No delete request has been sent. The notice “Deleted SL-110.” with the action “Undo” is still shown.",
+   "basis": "DERIVED",
+   "cites": [
+    "NTC-2",
+    "DEL-2"
+   ]
+  },
+  {
+   "id": "PRB-031",
+   "answer": "Yes, a deleteCard request was sent when the notice ended at 8000 ms. The notice is gone.",
+   "basis": "DERIVED",
+   "cites": [
+    "NTC-2",
+    "DEL-2",
+    "FIX-L9"
+   ]
+  },
+  {
+   "id": "PRB-032",
+   "answer": "SL-105 is back in Backlog at position 5, between SL-104 and SL-106. Focus is on card SL-105 (“SL-105 Write onboarding guide”). No delete request was sent and no notice shows.",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-3",
+    "NTC-5",
+    "DAT-8"
+   ]
+  },
+  {
+   "id": "PRB-033",
+   "answer": "One delete request has been sent, for SL-103, because the SL-105 notice ended the SL-103 notice. The notice shows “Deleted SL-105.” with the action “Undo”.",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-2",
+    "NTC-1",
+    "DEL-1"
+   ]
+  },
+  {
+   "id": "PRB-035",
+   "answer": "SL-125 is back in Done at position 6, between SL-124 and SL-126. The notice reads “Couldn't delete SL-125. It is back in Done.” with the action “Retry”.",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-4",
+    "DEL-2",
+    "DAT-8",
+    "FIX-14"
+   ]
+  },
+  {
+   "id": "PRB-037",
+   "answer": "Yes. The notice “Couldn't move SL-107. It is back in Backlog.” with the action “Retry” is still shown.",
+   "basis": "STATED",
+   "cites": [
+    "NTC-3"
+   ]
+  },
+  {
+   "id": "PRB-038",
+   "answer": "SL-101 is at the top of Ready, before SL-111. One move request was sent. The notice “Moved SL-101 to Ready.” with the action “Undo” is still shown, because Control+Z inside the filter field keeps the platform undo of typed text.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-1",
+    "WEB-4",
+    "WEB-10",
+    "NTC-2",
+    "DAT-6"
+   ]
+  },
+  {
+   "id": "PRB-039",
+   "answer": "The message “A title can have at most 80 characters.” is shown. Focus stays in the “Title” field and no save is sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "TTL-T1",
+    "DAT-10"
+   ]
+  },
+  {
+   "id": "PRB-040",
+   "answer": "Yes, the title is accepted. The place title becomes the 80 letters “a” with the mark “Saving…”, which is removed when the save succeeds. Focus is on the place title and one save is sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "TTL-T1",
+    "DAT-10",
+    "SAV-1",
+    "FIX-L6"
+   ]
+  },
+  {
+   "id": "PRB-041",
+   "answer": "The title shown is “Card title overflows on narrow screens”. No message is shown and no save is sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "TTL-3",
+    "DAT-10"
+   ]
+  },
+  {
+   "id": "PRB-042",
+   "answer": "The toggles bug, ui and perf can be pressed (they are on, and pressing removes the label). The toggles api, docs and blocked are disabled. The note shown is “Label limit reached (3)”.",
+   "basis": "DERIVED",
+   "cites": [
+    "LBL-1",
+    "DAT-11"
+   ]
+  },
+  {
+   "id": "PRB-044",
+   "answer": "The new comment shows “First note” under the header “Mika Ito · Sending…”, and the count reads “1 comment”. The comment field is disabled, so the user cannot type in it.",
+   "basis": "DERIVED",
+   "cites": [
+    "CMT-2",
+    "CMT-3",
+    "DAT-14",
+    "DAT-17",
+    "DAT-9"
+   ]
+  },
+  {
+   "id": "PRB-047",
+   "answer": "The address is “#/card/SL-114”. Focus is on the “Add a comment” field, which holds “draft” and a new line. No comment was sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "OPN-1",
+    "WEB-4",
+    "DIS-T1.7",
+    "CMT-2"
+   ]
+  },
+  {
+   "id": "PRB-048",
+   "answer": "The Comments section shows “2 comments”, then “Ana Ruiz · 17 Nov 2026, 11:15” with “See the linked report.”, then “Ben Okafor · 18 Nov 2026, 16:28” with “I can reproduce this.”. The field “Add a comment” is enabled.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRD-4",
+    "CRD-3",
+    "DAT-9",
+    "DAT-14",
+    "FIX-L4",
+    "FIX-14"
+   ]
+  },
+  {
+   "id": "PRB-049",
+   "answer": "The address is “#/?labels=bug”, the Board entry. The history depth is one more than at the start, because the card entry remains as a forward entry. Focus is on card SL-114 (“SL-114 Card title overflows on narrow screens”).",
+   "basis": "DERIVED",
+   "cites": [
+    "OPN-1",
+    "NAV-T3.1",
+    "NAV-T1.2",
+    "DIS-T1.8",
+    "MEM-T1",
+    "PRP-1"
+   ]
+  },
+  {
+   "id": "PRB-050",
+   "answer": "Card SL-114 (“Card title overflows on narrow screens”) is shown again in Card.Ready at address “#/card/SL-114”. The history depth is one more than at the start, because the Board entry is now a forward entry. Card loads requested: 1.",
+   "basis": "DERIVED",
+   "cites": [
+    "NAV-T3.2",
+    "CRD-T1",
+    "MEM-T1",
+    "NAV-T1"
+   ]
+  },
+  {
+   "id": "PRB-051",
+   "answer": "The page shows the place title “Card not found”, the text “There is no card SL-999 on this board.”, and the link “Go to the board”. The window title is “Not found · Slate”. No card load was requested.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRD-T1",
+    "WEB-2",
+    "MIS-1"
+   ]
+  }
+ ],
+ "ambiguities": [
+  "PRB-013: WEB-6 says the focus stop comes after the Select all of its column, but it does not say which Tab stop follows the focus stop; I took the next column's Select all.",
+  "PRB-017, PRB-026: DAT-8 says a card goes to its old position number, or to the end if the column is shorter. When the position equals the current length, the text does not say whether it is inserted there or appended; I inserted it at that position.",
+  "PRB-023: CRY-3 counts cards whose middle is above the pointer. The text does not say what happens when the pointer is exactly at a middle; I did not count the card whose middle the pointer is on.",
+  "PRB-004: the rules give no focus target when the 'Try again' button leaves the page; I used FOC-1 and took the place title.",
+  "PRB-022: the 'full' check in DAT-7 counts cards still marked 'Saving…'; I counted them.",
+  "NAV-T1 row 1 says focus is not moved on a reload, while MEM-T1 keeps a focus stop that is 'first visible' on reload. The text does not say whether the focus stop has focus after a reload."
+ ],
+ "contradictions": [
+  "FCS-2 and CRY-2 both say 'the nearest column on that side' but differ. FCS-2 requires a column with a visible card, so from In progress it skips the empty Review and goes to Done. CRY-2 requires a loaded column, and Empty counts as loaded, so it goes to Review. (PRB-011 uses FCS-2; PRB-021 uses CRY-2.)",
+  "MIS-1 says that while Missing.Page shows, Slate keeps the address as the user entered it. NAV-1 says that when Slate shows an address, it rewrites the current entry to the written form. For an unknown address such as #/nowhere, the written form is not defined, so the two rules disagree on what the address becomes."
+ ],
+ "toolCalls": 0
+}

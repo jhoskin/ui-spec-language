@@ -77,6 +77,8 @@ WEB-4 Bindings. "Card" means focus is on a card. "Outside text" means focus is n
   retry-comments           any             activate "Retry" of the comments
   open-board-link          any             activate "Go to the board"
   "Activate" is a pointer click, or Enter or Space with focus on the control.
+  In a field, Control+Z and Command+Z keep the platform default (undo of typed text). After
+  leave-title by Tab, the focus goes where the platform puts it (the next Tab stop).
 WEB-5 Roles. place title: heading of level 1. heading: heading of level 2. up-link, link:
   link. action: button. toggle: button with a pressed state (true, false, mixed); the toggle
   of a card item is a checkbox. choice: radio in a radio group. field: text box; the filter

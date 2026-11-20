@@ -14,6 +14,8 @@ A rule is inapplicable on a stack only if the modality sheet of that stack lists
 The inventory is closed. A place, state or content item that no face lists does not exist.
 A trigger that no rule names keeps the platform default.
 Frame rule: a rule changes only what it names.
+A timer that is due at a clock time has run when the clock shows that time: a notice that is
+  raised at 0 ms is gone at 8000 ms, and a reply with a latency of 400 ms is there at 400 ms.
 Quoted text is exact. In a quoted example, a card identifier, a column name, a label, the name
   of a person, a number and a count word stand for the values of the case at hand:
   "Moved SL-103 to Ready." is "Moved SL-107 to Review." for that card and that column.

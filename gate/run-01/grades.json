@@ -1,0 +1,1381 @@
+{
+ "qwen": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 0,
+   "why": "no answer given"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 0,
+   "why": "no answer given"
+  }
+ },
+ "opus": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 1,
+   "why": "focus on SL-125"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0.5,
+   "why": "address and SL-109 right, but hedges on whether other cards show"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 1,
+   "why": "SL-121"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 1,
+   "why": "Select all in Ready"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 1,
+   "why": "address and focus match"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "none selected"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 1,
+   "why": "notice, selection and orders match"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0.5,
+   "why": "hedges, 'likely 2'"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0.5,
+   "why": "count right but omits Ana Ruiz first and enabled field"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 1,
+   "why": "matches"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 1,
+   "why": "matches"
+  }
+ },
+ "haiku": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 1,
+   "why": "alert, Retry Ready, and 20 cards all match"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 1,
+   "why": "27 cards, 2 loads, focus on Board heading"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 1,
+   "why": "title and 2 loads match"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 1,
+   "why": "address #/ and all 10 backlog cards"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 1,
+   "why": "address, replace, and cards match"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 1,
+   "why": "focus on SL-125"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0.5,
+   "why": "address and SL-109 right, but says the rest of the visible set cannot be determined instead of only SL-109"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 1,
+   "why": "SL-121 has focus"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 1,
+   "why": "Select all in Ready"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 1,
+   "why": "#/ and focus on SL-125"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "none selected"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 1,
+   "why": "all facts match"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 0.5,
+   "why": "Dismiss action missing, rest matches"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0,
+   "why": "does not decide; key says 2"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "Review and notice match"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 1,
+   "why": "Ready, notice, one request"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 1,
+   "why": "order and notice match"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 1,
+   "why": "order matches"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 0.5,
+   "why": "Dismiss action missing"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 1,
+   "why": "position and notice match"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 0.5,
+   "why": "Dismiss action missing"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 1,
+   "why": "focus on SL-109, no delete request"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "no request, notice still shown"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "request sent, notice gone"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "back in place, focus, no request"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 1,
+   "why": "one request for SL-103, notice matches"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 0.5,
+   "why": "Dismiss action missing"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 1,
+   "why": "notice still shown"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 1,
+   "why": "all facts match"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 1,
+   "why": "message, focus, no save"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 1,
+   "why": "accepted, heading focus, one save"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 1,
+   "why": "old title, no message, no save"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 1,
+   "why": "toggles and note match"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 1,
+   "why": "comment, Sending, field disabled"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 1,
+   "why": "address, focus, no send"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0.5,
+   "why": "2 comments right, but first comment detail and enabled field not given"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 1,
+   "why": "address, history, focus match"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 1,
+   "why": "card shown, history grew, one load"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 1,
+   "why": "page, title, no load match"
+  }
+ },
+ "control-opus": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 0,
+   "why": "Button named 'Try again' not Retry; no card count given"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 0.5,
+   "why": "Two loads right, but no 27 count and focus hedged as heading/region"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 0,
+   "why": "Title format differs from 'SL-102 Fix login redirect loop · Slate'"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 1,
+   "why": "Address #/ and Backlog unfiltered match"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 0,
+   "why": "Address uses %20 instead of +; no counts or cards"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 0,
+   "why": "Focus on filter field, key says SL-125"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0,
+   "why": "Param order and encoding differ from key"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 0,
+   "why": "Says Review column; key says SL-121 in Done"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 0,
+   "why": "Does not name the Select all in Ready button"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 0.5,
+   "why": "Address right; focus hedged between two cards"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "0 selected, correct"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 0,
+   "why": "Wrong cards, notice, and selection"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 0,
+   "why": "Backlog order wrong (SL-107 position) and Review order wrong"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0.5,
+   "why": "No count of 2 given, no contradiction"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "Review and notice match"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 0,
+   "why": "Notice text wrong"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 1,
+   "why": "Order and notice match"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 1,
+   "why": "Order matches"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 0,
+   "why": "Notice text wrong"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 0.5,
+   "why": "Notice right but exact position not given"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 1,
+   "why": "Position and notice match"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 1,
+   "why": "Focus SL-109 and no delete sent"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "Matches"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "Matches"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "Matches"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 1,
+   "why": "One request and notice match"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 0.5,
+   "why": "Location ok but notice text truncated, wrong"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 1,
+   "why": "Yes, stays"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 1,
+   "why": "All facts match"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 0,
+   "why": "Message text wrong"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 0,
+   "why": "Focus wrong, should be heading"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 0,
+   "why": "Shows a message; key says none"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 0,
+   "why": "Note text wrong"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 0,
+   "why": "Wrong author, time and field state"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 0,
+   "why": "Focus wrong"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0,
+   "why": "Wrong card and content"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 0,
+   "why": "History change contradicts key"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 0,
+   "why": "Says 2 card loads; key says one"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 0,
+   "why": "Shows loading instead of Not found"
+  }
+ },
+ "sonnet": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 1,
+   "why": "alert, Retry and 20 cards all match"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 1,
+   "why": "27 cards, 2 loads, focus on Board heading"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 1,
+   "why": "title and 2 loads match"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 1,
+   "why": "address #/ and all 10 Backlog cards"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 1,
+   "why": "address, replace, and cards match"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 1,
+   "why": "focus on SL-125"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 1,
+   "why": "address, no new entry, SL-109"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 1,
+   "why": "SL-121 has focus"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 1,
+   "why": "Select all in Ready"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 1,
+   "why": "#/ and focus on SL-125"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "none selected"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 1,
+   "why": "cards, notice and selection match"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 1,
+   "why": "notice, selection and orders match; Dismiss omitted but not asked"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0,
+   "why": "does not decide the count of 2"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "Review and notice match"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 1,
+   "why": "all facts match"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 1,
+   "why": "order and notice match"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 1,
+   "why": "order matches"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 1,
+   "why": "position, focus and notice match"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 1,
+   "why": "position and notice match"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 1,
+   "why": "position and notice match"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 1,
+   "why": "focus on SL-109, no delete sent"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "no delete, notice shown"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "one delete sent, notice ended"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "restored, focused, no delete"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 1,
+   "why": "one delete for SL-103 and notice match"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 1,
+   "why": "position and notice match"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 1,
+   "why": "yes, still shown"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 1,
+   "why": "all facts match"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 1,
+   "why": "message, focus, no save"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 1,
+   "why": "accepted, heading focus, one save"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 1,
+   "why": "old title, no message, no save"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 1,
+   "why": "enabled/disabled labels and note match"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 1,
+   "why": "comment, Sending…, field disabled"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 1,
+   "why": "address, focus, no comment sent"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0.5,
+   "why": "2 comments and enabled field, but first comment's author and time not given"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 0.5,
+   "why": "address and focus right; history stated differently from key's one more than start"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 1,
+   "why": "card shown, history plus 1, one load"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 1,
+   "why": "heading, text, link, title, no load"
+  }
+ },
+ "control-haiku": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 0,
+   "why": "Says no error text remains; key shows the error and Retry, and the count is 20 cards"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 0.5,
+   "why": "Board shown and two loads are right, but no 27 cards and focus is hedged"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 0,
+   "why": "Window title is wrong"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 0,
+   "why": "Address and Backlog contents are wrong"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 0,
+   "why": "Address encoding is wrong and the card counts are not given"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 0,
+   "why": "Hedges and does not name SL-125"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0,
+   "why": "Address and the cards shown are wrong"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 0,
+   "why": "Focus should be SL-121"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 0,
+   "why": "Focus should be the Select all in Ready button"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 0,
+   "why": "Address and focus are wrong"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "None selected"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 0,
+   "why": "Move result and selection are wrong"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 0,
+   "why": "Notice, selection and order are wrong"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0,
+   "why": "Should be 2 selected"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "Review and the notice match"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 0,
+   "why": "SL-116 stays in Ready; only one move request"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 0,
+   "why": "Order and notice are wrong"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 0,
+   "why": "Order is wrong"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 0,
+   "why": "Notice text is wrong"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 0,
+   "why": "Should be Ready, not Review"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 0,
+   "why": "SL-108 stays in Ready; notice is wrong"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 0,
+   "why": "Focus should be SL-109"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "No request yet and notice still shown"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "Notice gone and delete sent"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "Back in place, focused, no delete sent"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 0,
+   "why": "One delete was sent; notice is wrong"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 0.5,
+   "why": "Back in place, but the notice is incomplete and Done is not named"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 0,
+   "why": "The notice stays"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 0,
+   "why": "Undo did not happen; one move request"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 0,
+   "why": "Message text is wrong"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 1,
+   "why": "Accepted, focus on the title, save sent"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 0,
+   "why": "No message is shown"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 0,
+   "why": "Labels and note are wrong"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 0,
+   "why": "Should show Sending… with the field disabled"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 0,
+   "why": "Focus stays in the comment field"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0,
+   "why": "Missing the 2 comments heading and details"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 0,
+   "why": "Address and history are wrong"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 0,
+   "why": "Should show card SL-114"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 0,
+   "why": "Window title is wrong"
+  }
+ },
+ "control-sonnet": {
+  "PRB-003": {
+   "n": 1,
+   "grade": 0.5,
+   "why": "Error and Retry right, but no 'Couldn't load Ready.' text and no '20 cards' count"
+  },
+  "PRB-004": {
+   "n": 2,
+   "grade": 1,
+   "why": "Full board, 2 loads, focus on heading all match"
+  },
+  "PRB-005": {
+   "n": 3,
+   "grade": 0,
+   "why": "Window title is wrong; it omits 'Fix login redirect loop'"
+  },
+  "PRB-006": {
+   "n": 4,
+   "grade": 1,
+   "why": "Address #/ and unfiltered Backlog match"
+  },
+  "PRB-007": {
+   "n": 5,
+   "grade": 0,
+   "why": "Address uses %20 instead of q=login+fix"
+  },
+  "PRB-008": {
+   "n": 6,
+   "grade": 1,
+   "why": "Focus on SL-125 matches"
+  },
+  "PRB-009": {
+   "n": 7,
+   "grade": 0,
+   "why": "Address string and parameter order differ from the key"
+  },
+  "PRB-011": {
+   "n": 8,
+   "grade": 0,
+   "why": "Focus is on SL-121 per the key, not SL-119"
+  },
+  "PRB-013": {
+   "n": 9,
+   "grade": 0,
+   "why": "Does not identify the 'Select all in Ready' button"
+  },
+  "PRB-014": {
+   "n": 10,
+   "grade": 0,
+   "why": "Address should be #/, not #/?q=sl-125"
+  },
+  "PRB-015": {
+   "n": 11,
+   "grade": 1,
+   "why": "Zero cards selected matches"
+  },
+  "PRB-016": {
+   "n": 12,
+   "grade": 0,
+   "why": "Contents, notice and selection are all wrong"
+  },
+  "PRB-017": {
+   "n": 13,
+   "grade": 0,
+   "why": "Notice text and Backlog and Review details are wrong"
+  },
+  "PRB-019": {
+   "n": 14,
+   "grade": 0,
+   "why": "Says 7 selected; key says 2"
+  },
+  "PRB-021": {
+   "n": 15,
+   "grade": 1,
+   "why": "Review and the notice match"
+  },
+  "PRB-022": {
+   "n": 16,
+   "grade": 0,
+   "why": "SL-116 stays in Ready, with one move request"
+  },
+  "PRB-023": {
+   "n": 17,
+   "grade": 0,
+   "why": "Order not given and the answer is unsure"
+  },
+  "PRB-024": {
+   "n": 18,
+   "grade": 1,
+   "why": "Order SL-101, SL-102, SL-111, SL-103 matches"
+  },
+  "PRB-025": {
+   "n": 19,
+   "grade": 0.5,
+   "why": "Location and focus right, but the notice text is truncated"
+  },
+  "PRB-026": {
+   "n": 20,
+   "grade": 0.5,
+   "why": "Ready and the notice right, but the position between SL-116 and SL-117 is missing"
+  },
+  "PRB-028": {
+   "n": 21,
+   "grade": 0,
+   "why": "Notice wording differs from the key ('the move of')"
+  },
+  "PRB-029": {
+   "n": 22,
+   "grade": 1,
+   "why": "Focus on SL-109 and no delete request match"
+  },
+  "PRB-030": {
+   "n": 23,
+   "grade": 1,
+   "why": "No delete request and notice still shown match"
+  },
+  "PRB-031": {
+   "n": 24,
+   "grade": 1,
+   "why": "Request sent and notice ended match"
+  },
+  "PRB-032": {
+   "n": 25,
+   "grade": 1,
+   "why": "Restored place, focus on SL-105 and no delete request match"
+  },
+  "PRB-033": {
+   "n": 26,
+   "grade": 1,
+   "why": "One delete request and a Deleted SL-105 notice with Undo match"
+  },
+  "PRB-035": {
+   "n": 27,
+   "grade": 0.5,
+   "why": "Restored place right, but the notice text is truncated"
+  },
+  "PRB-037": {
+   "n": 28,
+   "grade": 1,
+   "why": "Notice still shown matches"
+  },
+  "PRB-038": {
+   "n": 29,
+   "grade": 1,
+   "why": "Stays moved, one move request and notice shown match"
+  },
+  "PRB-039": {
+   "n": 30,
+   "grade": 0,
+   "why": "Error message text differs from the key"
+  },
+  "PRB-040": {
+   "n": 31,
+   "grade": 0,
+   "why": "Focus should be on the heading, not the Edit title button"
+  },
+  "PRB-041": {
+   "n": 32,
+   "grade": 0,
+   "why": "Says a message is shown; key says none"
+  },
+  "PRB-042": {
+   "n": 33,
+   "grade": 0,
+   "why": "Wrong about which labels are pressable and no exact note text"
+  },
+  "PRB-044": {
+   "n": 34,
+   "grade": 0.5,
+   "why": "Pending state and disabled field right, but the author and the disabled button are missing"
+  },
+  "PRB-047": {
+   "n": 35,
+   "grade": 1,
+   "why": "Address, focus in the comment field and no comment sent match"
+  },
+  "PRB-048": {
+   "n": 36,
+   "grade": 0.5,
+   "why": "Comments loaded, but the '2 comments' heading and details are missing"
+  },
+  "PRB-049": {
+   "n": 37,
+   "grade": 1,
+   "why": "Address, history and focus on SL-114 are consistent with the key"
+  },
+  "PRB-050": {
+   "n": 38,
+   "grade": 0,
+   "why": "Says 2 card loads; key says 1"
+  },
+  "PRB-051": {
+   "n": 39,
+   "grade": 0,
+   "why": "Window title should be 'Not found · Slate'"
+  }
+ }
+}

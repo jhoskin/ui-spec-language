@@ -1,0 +1,61 @@
+{
+  "run": "03",
+  "set": "open",
+  "date": "2026-11-20T14:26:21.484Z",
+  "probes": 39,
+  "mustProbes": 39,
+  "probeBankSha256": "508142991fb0f8d2d56785e7d08c6a90fd9417b7cd4add72d70814e0f1a9c0b6",
+  "packageSha256": "586ae948195fc2fb4b8d0581f6c57e9198fce170e82fb38c1238b41104064bc5",
+  "readers": [
+    "opus",
+    "sonnet",
+    "haiku",
+    "qwen"
+  ],
+  "gating": [
+    "opus",
+    "sonnet",
+    "haiku"
+  ],
+  "scores": {
+    "control-sonnet": {
+      "all": 18,
+      "must": 18
+    },
+    "control-opus": {
+      "all": 20,
+      "must": 20
+    },
+    "control-haiku": {
+      "all": 11,
+      "must": 11
+    },
+    "sonnet": {
+      "all": 39,
+      "must": 39
+    },
+    "opus": {
+      "all": 39,
+      "must": 39
+    },
+    "haiku": {
+      "all": 39,
+      "must": 39
+    },
+    "qwen": {
+      "all": 23,
+      "must": 23
+    }
+  },
+  "toolCalls": {
+    "control-sonnet": 0,
+    "control-opus": 0,
+    "control-haiku": 0,
+    "sonnet": 0,
+    "opus": 0,
+    "haiku": 0,
+    "qwen": 0
+  },
+  "mustBlocked": [],
+  "pass": true
+}
