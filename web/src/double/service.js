@@ -26,7 +26,13 @@ export function createService({ data, config, profile, clock }) {
       order.get(c.column).push(c.id);
     }
   }
-  const faults = plan.faults.map((name) => ({ name, ...config.faults[name], left: config.faults[name].times }));
+  // "skip" is the number of matching replies that pass before the fault is used.
+  const faults = plan.faults.map((name) => ({
+    name,
+    ...config.faults[name],
+    left: config.faults[name].times,
+    skip: config.faults[name].skip ?? 0,
+  }));
   const log = [];
 
   const columnOf = (id) => {
@@ -57,6 +63,10 @@ export function createService({ data, config, profile, clock }) {
       if (hit && f.where) hit = Object.entries(f.where).every(([k, v]) => args[k] === v);
       if (hit && f.contains) {
         hit = Object.entries(f.contains).every(([k, v]) => String(args[k] ?? "").toLowerCase().includes(v));
+      }
+      if (hit && f.skip > 0) {
+        f.skip -= 1;
+        continue;
       }
       if (hit) {
         f.left -= 1;

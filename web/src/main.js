@@ -19,7 +19,11 @@ history.scrollRestoration = "manual";
 const nav = {
   address: () => location.hash || "#/",
   state: () => history.state,
-  push: (address, state) => history.pushState(state, "", address),
+  push(address, state) {
+    // Keep the scroll of the entry that the user leaves, for a later Back.
+    history.replaceState({ ...history.state, scroll: [scrollX, scrollY] }, "");
+    history.pushState(state, "", address);
+  },
   replace: (address, state) => history.replaceState({ ...state, scroll: history.state?.scroll }, "", address),
   back: () => history.back(),
 };

@@ -1,0 +1,15 @@
+[
+  {"from": "web/index.html"},
+  {"from": "web/styles.css"},
+  {"from": "web/src/app.js"},
+  {"from": "web/src/core.js"},
+  {"from": "web/src/main.js"},
+  {"from": "web/src/view.js"},
+  {"from": "web/src/double/clock.js"},
+  {"from": "web/src/double/service.js"},
+  {"from": "fixture/data.json"},
+  {"from": "fixture/service.json"},
+  {"from": "fixture/fixture.md"},
+  {"from": "spec/conventions.md"},
+  {"from": "tools/driver-guide.md", "to": "driver-guide.md"}
+]

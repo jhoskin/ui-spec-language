@@ -493,6 +493,115 @@
    ]
   },
   {
+   "name": "the second move of SL-108 fails; the first and the third are saved",
+   "profile": "default",
+   "calls": [
+    {
+     "at": 0,
+     "op": "moveCards",
+     "args": {
+      "moves": [
+       {
+        "card": "SL-108",
+        "column": "review",
+        "index": 0
+       }
+      ]
+     }
+    },
+    {
+     "at": 400,
+     "op": "moveCards",
+     "args": {
+      "moves": [
+       {
+        "card": "SL-108",
+        "column": "backlog",
+        "index": 7
+       }
+      ]
+     }
+    },
+    {
+     "at": 800,
+     "op": "moveCards",
+     "args": {
+      "moves": [
+       {
+        "card": "SL-108",
+        "column": "backlog",
+        "index": 7
+       }
+      ]
+     }
+    },
+    {
+     "at": 1200,
+     "op": "loadColumn",
+     "args": {
+      "column": "review"
+     }
+    }
+   ],
+   "replies": [
+    {
+     "at": 400,
+     "call": 0,
+     "reply": {
+      "ok": true,
+      "data": {
+       "results": [
+        {
+         "card": "SL-108",
+         "ok": true
+        }
+       ]
+      }
+     }
+    },
+    {
+     "at": 800,
+     "call": 1,
+     "reply": {
+      "ok": true,
+      "data": {
+       "results": [
+        {
+         "card": "SL-108",
+         "ok": false
+        }
+       ]
+      }
+     }
+    },
+    {
+     "at": 1200,
+     "call": 2,
+     "reply": {
+      "ok": true,
+      "data": {
+       "results": [
+        {
+         "card": "SL-108",
+         "ok": true
+        }
+       ]
+      }
+     }
+    },
+    {
+     "at": 1500,
+     "call": 3,
+     "reply": {
+      "ok": true,
+      "data": {
+       "cards": []
+      }
+     }
+    }
+   ]
+  },
+  {
    "name": "a title with FLAKY in any case fails one time",
    "profile": "default",
    "calls": [

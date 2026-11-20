@@ -1,0 +1,31 @@
+You extract the design of a small web application, Slate (a kanban issue tracker), into text. Another person made a first extraction. You have not seen it. Your extraction is compared with it to find what either one missed.
+
+Your work directory holds:
+
+- `web/`: the source of the application (the reference build).
+- `fixture/`: the fixed data set, the service table (latency, faults, profiles) and `fixture.md`.
+- `spec/conventions.md`: the notation and the observation vocabulary to use.
+- `driver-guide.md`: how to drive the running application. Use it. Do not rely on reading the code alone.
+
+You cannot use the network. Use `/opt/homebrew/bin/python3` if you need Python. Write temporary files only in your work directory.
+
+Write three files in `extraction/`: `app.md`, `board.md`, `card.md`. For each region that holds state, fill these slots, in the notation of `spec/conventions.md`:
+
+1. A `States:` line that names each state a user can tell apart.
+2. A face for each state: the content items in reading order with exact strings.
+3. For each state and each thing the user can do or that can happen (a reply, a failure, a timer), one statement of the effect: what shows, where focus goes, what the address and the history depth do, which request is sent and when. Say "nothing" where nothing happens.
+4. Where two statements could apply to one situation, one first-match table.
+5. What survives a step to another place, Back or Forward, a reload, and an address entered while the application runs.
+6. Each timer, with its length, and the behavior on both sides of it.
+7. Each limit, with the behavior at the limit and one above it.
+8. Each data rule (matching, ordering, normalization, count words, time format) with one example from the fixture.
+
+Rules for the work:
+
+- State what a user perceives. Do not cite code, files or function names. Use the code only as evidence.
+- Check each statement that matters on the running application with the driver, with the clock and with injected faults (the profiles and the faults in `fixture/service.json`). Where the running application and your reading of the code differ, write what the application does.
+- Cover the board (loading, failure, filter, selection, bulk actions, moving a card by keys and by pointer, delete, undo), the card place (title, labels, assignee, description, comments, delete), the notice, navigation and unknown addresses.
+- Prefer decisions that an implementer would get wrong by guessing. Be exact about order, position, counts, focus and timing.
+- Keep each statement short. You may invent your own names for intents and states.
+
+When the three files are complete, reply with a list of the 15 decisions that you think an implementer is most likely to get wrong.

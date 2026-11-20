@@ -202,7 +202,7 @@ export function createView(app, doc) {
           tabindex: "-1",
           "aria-label": `Select ${c.id}`,
           checked: c.selected,
-          on: { click: (e) => (e.preventDefault(), app.toggleSelect(c.id)) },
+          on: { click: (e) => (e.preventDefault(), e.target.closest("[data-card]").focus(), app.toggleSelect(c.id)) },
         }),
         h("span", { class: "quiet id" }, c.id),
         h(
@@ -508,6 +508,11 @@ export function createView(app, doc) {
   });
   // A drag selects no text.
   doc.addEventListener("selectstart", (e) => drag && e.preventDefault());
+
+  doc.addEventListener("focusin", (e) => {
+    const id = e.target.getAttribute?.("data-card");
+    if (id && !app.model().carrying && !e.target.matches('[tabindex="0"]')) app.noteFocus(id);
+  });
 
   doc.getElementById("home").addEventListener("click", (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey) return;
