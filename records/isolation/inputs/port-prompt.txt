@@ -1,0 +1,30 @@
+You build a terminal user interface for an application named Slate, a kanban issue tracker with mock data. You build it from a written specification alone. You have never seen another build of Slate, and there is none in your work directory.
+
+Your work directory holds the specification package:
+
+- `spec/conventions.md`: the notation. Read it first.
+- `spec/app.md`, `spec/places/`, `spec/data.md`, `spec/tasks.md`, `spec/appearance.md`: the modality-neutral core. It is normative.
+- `spec/modality/terminal.md`: the sheet for your stack: addresses, key bindings, how state shows in characters, the permitted adaptations and the harness (TRM-H1 to TRM-H6). It is normative for your build.
+- `spec/modality/web.md`: the sheet for another stack. It does not bind you.
+- `fixture/`: `fixture.md`, `data.json`, `service.json` (latency, faults, profiles), `vectors.json` (timed calls and correct replies) and `harness.md`.
+- `scenarios/`: public scenarios with their grammar in `scenarios/README.md`.
+- `sidecar/matrix.md`: a worksheet. It is not normative.
+
+Build this:
+
+- `tui/slate.py`, with more modules in `tui/` if you want them. Python 3 standard library only. No third-party package. Run Python as `/opt/homebrew/bin/python3`.
+- The build paints with raw control sequences as TRM-12 allows. Do not use `curses`.
+- Write your own service double and clock from `fixture/`. Your double must give the replies of every vector in `fixture/vectors.json`. Write a test that proves it and run it.
+- Implement the harness exactly: `--profile`, `--address`, `--harness`, the control channel on file descriptors 3 and 4, the frame lines and the semantic dump. Another program drives your build through this harness and checks the dump against the painted grid. You do not see that program and you do not write it.
+- Implement every must-level rule, table, data rule and property of the core, and every entry of the terminal sheet. Implement should-level rules where the terminal sheet does not make them inapplicable.
+
+How to work:
+
+- You cannot use the network. Write temporary files only in your work directory.
+- Keep the logic of the application apart from the terminal, so that you can test it without a terminal. Write tests under `tui/tests/` with `unittest` and run them with `/opt/homebrew/bin/python3 -m unittest discover -s tui/tests`.
+- Use the public scenarios as test cases: write tests that walk through scenarios step by step against your logic.
+- If you can open a pseudo-terminal with the `pty` module, also test the real program through `--harness`. If the sandbox does not allow it, say so in your notes.
+- Where the specification does not decide something that you need, do not guess silently. Choose, and write the question and your choice in `tui/NOTES.md` with the identifier of the nearest rule. Where two statements disagree, write that down too.
+- Do not edit any file under `spec/`, `fixture/`, `scenarios/` or `sidecar/`.
+
+When you are done, reply with: the list of files you wrote, the result of your tests, the number of vectors that your double passes, and the content of `tui/NOTES.md`.

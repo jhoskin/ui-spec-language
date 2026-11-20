@@ -1,0 +1,50 @@
+{
+  "id": "PRB-050",
+  "level": "must",
+  "area": "navigation, history, reload and unknown addresses",
+  "situation": [
+    "Open the address #/card/SL-114 directly with the default data and let the clock run 700 ms.",
+    "Click the link \"← Board\". Let the clock run 2200 ms. Then press the browser's Back button."
+  ],
+  "question": "What is shown, how did the history change, and how many card loads were requested?",
+  "answer": "The card SL-114 again. \"← Board\" added a history entry (one more than at the start). Only one card load was requested; the card is not loaded again.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "link",
+          "name": "← Board"
+        }
+      },
+      {
+        "advance": 2200
+      },
+      {
+        "back": true
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/card/SL-114"
+    },
+    {
+      "historyDelta": 1
+    },
+    {
+      "requests": {
+        "op": "loadCard",
+        "count": 1
+      }
+    },
+    {
+      "windowTitle": "SL-114 Card title overflows on narrow screens · Slate"
+    }
+  ]
+}

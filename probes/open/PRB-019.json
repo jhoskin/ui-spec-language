@@ -1,0 +1,63 @@
+{
+  "id": "PRB-019",
+  "level": "must",
+  "area": "selection and bulk actions",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-111 and press Shift+X, so that all 7 cards of Ready are selected.",
+    "Click the label filter button \"bug\", then click \"Clear filters\"."
+  ],
+  "question": "How many cards are selected now?",
+  "answer": "2 (\"2 selected\"): SL-111 and SL-114. The cards hidden by the filter left the selection and do not come back when the filter is cleared.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-111"
+        }
+      },
+      {
+        "key": "Shift+X"
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "bug"
+        }
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Clear filters"
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "2 selected"
+    },
+    {
+      "screenLacks": "7 selected"
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    }
+  ]
+}

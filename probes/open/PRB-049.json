@@ -1,0 +1,49 @@
+{
+  "id": "PRB-049",
+  "level": "must",
+  "area": "navigation, history, reload and unknown addresses",
+  "situation": [
+    "Open the address #/?labels=bug directly with the default data and let the clock run 2200 ms.",
+    "Put focus on SL-114 and press Enter. Let the clock run 300 ms. Press Escape."
+  ],
+  "question": "What is the address, how did the history change, and which part has focus?",
+  "answer": "The address is #/?labels=bug again (Escape went Back, so the history has one more entry than at the start, not two). Focus is on card SL-114.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/?labels=bug",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-114"
+        }
+      },
+      {
+        "key": "Enter"
+      },
+      {
+        "advance": 300
+      },
+      {
+        "key": "Escape"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/?labels=bug"
+    },
+    {
+      "historyDelta": 1
+    },
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-114 Card title overflows on narrow screens"
+      }
+    }
+  ]
+}

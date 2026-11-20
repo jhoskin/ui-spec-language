@@ -1,0 +1,71 @@
+{
+  "role": "probe-author",
+  "run": "01",
+  "model": "opus",
+  "tools": "Read,Write,Edit,Glob,Grep,Bash",
+  "started": "2026-11-20T13:50:32.646Z",
+  "ended": "2026-11-20T14:03:43.102Z",
+  "promptSha256": "0b95b00f563fc59d05c8e69e1d65a8a552de7ed86930b4965e3ba0e31e9694d6",
+  "manifest": [
+    {
+      "path": "web/index.html",
+      "sha256": "6c8e75f76a666346a0b0983d6756535a1269decba4abd498d35459d28c482fe8"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "01c98b971e6d3b629f3874b9284fba845d6c993dd4f9065aa62b1647f974772d"
+    },
+    {
+      "path": "web/src/app.js",
+      "sha256": "56613602d0d984f4e02df4c6565091348310d2f30d66e3f00c72e197732958ac"
+    },
+    {
+      "path": "web/src/core.js",
+      "sha256": "16a671b9b7fb5f5fe05684094a0234fefb83dcac57972d30c2957c43ad34023a"
+    },
+    {
+      "path": "web/src/main.js",
+      "sha256": "cfa4c27147819f7cc2b77afcbb52d470e15cdd0a9a6de92e0864c4c0f33083f5"
+    },
+    {
+      "path": "web/src/view.js",
+      "sha256": "29c1bcad533417bf5634aa3d3d42b5ada0421608d1ac5b3c5f63dac8ddb6fc04"
+    },
+    {
+      "path": "web/src/double/clock.js",
+      "sha256": "c907413ccf1760377398ae42ef050379b93ead04e5744e79241cd2ccca506654"
+    },
+    {
+      "path": "web/src/double/service.js",
+      "sha256": "d544d84466b614077ae6f705c0d97d1f1127fe6e41e3261e2aefae77e8ff9b49"
+    },
+    {
+      "path": "fixture/data.json",
+      "sha256": "a6b159ceece3c05adbdf6d74359557b76c81a1b6867ef7c60d871d829f67791e"
+    },
+    {
+      "path": "fixture/service.json",
+      "sha256": "e60b616b3dec3447c0cf8d45c7d2756288d34c073581f83d52dc91ecc03ec9ee"
+    },
+    {
+      "path": "fixture/fixture.md",
+      "sha256": "c795c9659b48d710e5ff87a24ff329e353e0bdeb0e5e2f12ca17207954da46f8"
+    },
+    {
+      "path": "driver-guide.md",
+      "sha256": "343c1935f49c5b0b5b0cc56c84822c15114e306435ee921b73772421838a6cf2"
+    },
+    {
+      "path": "probe-guide.md",
+      "sha256": "b1d328c0d07280f0318f7378ee2103297e0b7271c19f4b339b8119f4273f8e6d"
+    },
+    {
+      "path": "check_probes.py",
+      "sha256": "4eef6da0980f97620ef81a9e7a845d20720e82f984d01007b5dd63ed5d5ef12b"
+    }
+  ],
+  "transcriptSha256": "93a06442c961cee32c706bc93d781e36a596a5d5cc08b8be7f88204bc6982777",
+  "toolCalls": 45,
+  "violations": [],
+  "clean": true
+}

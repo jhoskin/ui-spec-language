@@ -1,0 +1,68 @@
+{
+  "id": "PRB-014",
+  "level": "must",
+  "area": "focus and keys on the board",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Press \"/\", type \"sl-125\" and press Enter.",
+    "Press \"/\" again, then press Escape, then press Escape again."
+  ],
+  "question": "What is the address and which part has focus after the second Escape?",
+  "answer": "The address is #/ (the first Escape cleared the filter text and kept focus in the field). After the second Escape, focus is on card SL-125 Remove legacy export.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "key": "/"
+      },
+      {
+        "type": "sl-125"
+      },
+      {
+        "key": "Enter"
+      },
+      {
+        "key": "/"
+      },
+      {
+        "key": "Escape"
+      },
+      {
+        "key": "Escape"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/"
+    },
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-125 Remove legacy export"
+      }
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    }
+  ]
+}

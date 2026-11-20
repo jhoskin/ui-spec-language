@@ -1,0 +1,51 @@
+{
+  "id": "PRB-041",
+  "level": "must",
+  "area": "card place",
+  "situation": [
+    "Open the address #/card/SL-114 directly and let the clock run 700 ms.",
+    "Click \"Edit title\", replace the text of the Title field with three spaces, and press Tab."
+  ],
+  "question": "What title is shown, is a message shown, and was a save sent?",
+  "answer": "The old title \"Card title overflows on narrow screens\" is shown again; the blank draft is dropped without a message. No save is sent.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Edit title"
+        }
+      },
+      {
+        "fill": {
+          "role": "textbox",
+          "name": "Title"
+        },
+        "value": "   "
+      },
+      {
+        "key": "Tab"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "heading \"Card title overflows on narrow screens\""
+    },
+    {
+      "screenLacks": "at least 1 character"
+    },
+    {
+      "requests": {
+        "op": "saveTitle",
+        "count": 0
+      }
+    }
+  ]
+}

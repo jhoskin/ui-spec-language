@@ -1,0 +1,31 @@
+{
+  "id": "PRB-002",
+  "level": "should",
+  "area": "board loading and failures",
+  "situation": [
+    "Open the board address #/ with the default data. Do nothing else and let the clock run 1399 ms from the start."
+  ],
+  "question": "Is any text shown in the Done column besides its heading and placeholders?",
+  "answer": "No. The Done column shows only placeholders; the line \"Still loading…\" is not shown yet.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 1399
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenLacks": "Still loading…"
+    },
+    {
+      "order": {
+        "column": "Done",
+        "cards": []
+      }
+    }
+  ]
+}

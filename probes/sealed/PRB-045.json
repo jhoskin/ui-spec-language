@@ -1,0 +1,50 @@
+{
+  "id": "PRB-045",
+  "level": "should",
+  "area": "comments",
+  "situation": [
+    "Open the address #/card/SL-110 directly and let the clock run 700 ms, then 64000 ms more. (The clock started at 2026-11-20 09:00:00 UTC.)",
+    "Click the \"Add a comment\" field, type \"  First note \" and press Control+Enter. Let the clock run 500 ms."
+  ],
+  "question": "What line is shown above the text of the new comment?",
+  "answer": "\"Mika Ito · 20 Nov 2026, 09:01\" (an absolute UTC time, not a relative one).",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-110",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "advance": 64000
+      },
+      {
+        "click": {
+          "role": "textbox",
+          "name": "Add a comment"
+        }
+      },
+      {
+        "type": "  First note "
+      },
+      {
+        "key": "Control+Enter"
+      },
+      {
+        "advance": 500
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "Mika Ito · 20 Nov 2026, 09:01"
+    },
+    {
+      "screenLacks": "Sending…"
+    },
+    {
+      "screenHas": "1 comment"
+    }
+  ]
+}

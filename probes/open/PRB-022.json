@@ -1,0 +1,80 @@
+{
+  "id": "PRB-022",
+  "level": "must",
+  "area": "moving a card by keys and by pointer",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Move SL-117 into In progress: focus SL-117, press Space, ArrowRight, Space, and let the clock run 400 ms.",
+    "Then focus SL-116, press Space, ArrowRight, Space."
+  ],
+  "question": "Where is SL-116, what does the notice say, and how many move requests were sent in all?",
+  "answer": "SL-116 stays in Ready. Notice: \"In progress is full (3 cards).\" Only one move request was sent (for SL-117).",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-117"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      },
+      {
+        "focus": {
+          "card": "SL-116"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "announced": "In progress is full (3 cards)."
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    },
+    {
+      "screenHas": "paragraph: 3 cards"
+    }
+  ]
+}

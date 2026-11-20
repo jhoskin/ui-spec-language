@@ -1,0 +1,83 @@
+{
+  "id": "PRB-017",
+  "level": "must",
+  "area": "selection and bulk actions",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Select SL-106, SL-107 and SL-108 with the x key (focus SL-106, x, ArrowDown, x, ArrowDown, x).",
+    "Click the button \"Review\" in the \"Move selected to\" group, then let the clock run 400 ms. The service fails the move of SL-107."
+  ],
+  "question": "What does the notice say, what is selected, and what is the order of Backlog and Review?",
+  "answer": "Notice: \"Moved 2 of 3 cards to Review. Couldn't move SL-107.\" with Retry and Dismiss. Only SL-107 is selected (\"1 selected\"). Review: SL-106, SL-108. Backlog: SL-101 to SL-105, SL-109, SL-107, SL-110 (SL-107 goes back to its old index).",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-106"
+        }
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "x"
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Review"
+        }
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "announced": "Moved 2 of 3 cards to Review. Couldn't move SL-107."
+    },
+    {
+      "screenHas": "1 selected"
+    },
+    {
+      "order": {
+        "column": "Review",
+        "cards": [
+          "SL-106",
+          "SL-108"
+        ]
+      }
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-109",
+          "SL-107",
+          "SL-110"
+        ]
+      }
+    }
+  ]
+}

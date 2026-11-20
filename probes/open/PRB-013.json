@@ -1,0 +1,40 @@
+{
+  "id": "PRB-013",
+  "level": "must",
+  "area": "focus and keys on the board",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on card SL-103, press ArrowDown, then press Tab."
+  ],
+  "question": "Which part has focus after Tab?",
+  "answer": "The \"Select all in Ready\" button. The other cards of Backlog are not Tab stops; the board cards have one Tab stop.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-103"
+        }
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "Tab"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "focus": {
+        "role": "button",
+        "name": "Select all in Ready"
+      }
+    }
+  ]
+}

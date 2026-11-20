@@ -1,0 +1,44 @@
+{
+  "id": "PRB-052",
+  "level": "must",
+  "area": "navigation, history, reload and unknown addresses",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Enter the address #/card/SL-102 in the address bar while the app runs. Let the clock run 300 ms. Press Escape."
+  ],
+  "question": "What is the address, how did the history change, and which part has focus?",
+  "answer": "The board at #/. Escape added a new entry (two more than at the start), because the card was not opened from the board. Focus is on card SL-102.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "address": "#/card/SL-102"
+      },
+      {
+        "advance": 300
+      },
+      {
+        "key": "Escape"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/"
+    },
+    {
+      "historyDelta": 2
+    },
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-102 Fix login redirect loop"
+      }
+    }
+  ]
+}

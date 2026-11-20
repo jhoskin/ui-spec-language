@@ -1,0 +1,66 @@
+{
+  "id": "PRB-032",
+  "level": "must",
+  "area": "delete and undo",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-105 and press Delete. Then press Control+Z. Let the clock run 9000 ms."
+  ],
+  "question": "Where is SL-105, which part has focus, and was a delete request sent?",
+  "answer": "SL-105 is back in its place in Backlog and has focus. No delete request was ever sent.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-105"
+        }
+      },
+      {
+        "key": "Delete"
+      },
+      {
+        "key": "Control+z"
+      },
+      {
+        "advance": 9000
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    },
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-105 Write onboarding guide"
+      }
+    },
+    {
+      "requests": {
+        "op": "deleteCard",
+        "count": 0
+      }
+    }
+  ]
+}

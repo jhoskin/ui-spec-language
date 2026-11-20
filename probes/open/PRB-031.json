@@ -1,0 +1,43 @@
+{
+  "id": "PRB-031",
+  "level": "must",
+  "area": "delete and undo",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-110 and press Delete. Let the clock run 8000 ms."
+  ],
+  "question": "Has a delete request been sent, and is the notice still shown?",
+  "answer": "The notice has ended and exactly one delete request has been sent.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-110"
+        }
+      },
+      {
+        "key": "Delete"
+      },
+      {
+        "advance": 8000
+      }
+    ]
+  },
+  "checks": [
+    {
+      "requests": {
+        "op": "deleteCard",
+        "count": 1
+      }
+    },
+    {
+      "screenLacks": "Deleted SL-110."
+    }
+  ]
+}

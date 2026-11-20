@@ -1,0 +1,63 @@
+{
+  "id": "PRB-004",
+  "level": "must",
+  "area": "board loading and failures",
+  "situation": [
+    "Use the fixture profile \"board-down\", in which the first load of the board fails.",
+    "Open the board address #/ and let the clock run 400 ms.",
+    "Click the \"Try again\" button with the pointer, then let the clock run 2200 ms."
+  ],
+  "question": "What does the user see now, how many board loads were requested in all, and which part has focus?",
+  "answer": "The full board with all 27 cards (\"27 cards\" in the count line). Two board loads were requested. Focus is on the \"Board\" heading.",
+  "conventional": false,
+  "request": {
+    "profile": "board-down",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 400
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Try again"
+        }
+      },
+      {
+        "advance": 2200
+      }
+    ]
+  },
+  "checks": [
+    {
+      "announced": "27 cards"
+    },
+    {
+      "requests": {
+        "op": "loadBoard",
+        "count": 2
+      }
+    },
+    {
+      "focus": {
+        "role": "h1",
+        "name": "Board"
+      }
+    },
+    {
+      "order": {
+        "column": "Done",
+        "cards": [
+          "SL-120",
+          "SL-121",
+          "SL-122",
+          "SL-123",
+          "SL-124",
+          "SL-125",
+          "SL-126",
+          "SL-127"
+        ]
+      }
+    }
+  ]
+}

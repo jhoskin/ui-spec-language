@@ -1,0 +1,54 @@
+{
+  "id": "PRB-027",
+  "level": "must",
+  "area": "save failures, rollback and retry",
+  "situation": [
+    "Open the address #/card/SL-114 directly and let the clock run 700 ms.",
+    "Click \"Edit title\", replace the text of the Title field with \"A FLAKY title\" and press Enter. The service fails this save. Let the clock run 400 ms."
+  ],
+  "question": "What title is shown, what is the window title, and what does the notice say?",
+  "answer": "The old title is back: \"Card title overflows on narrow screens\"; window title \"SL-114 Card title overflows on narrow screens · Slate\". Notice: \"Couldn't save the title of SL-114.\" with Retry.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Edit title"
+        }
+      },
+      {
+        "fill": {
+          "role": "textbox",
+          "name": "Title"
+        },
+        "value": "A FLAKY title"
+      },
+      {
+        "key": "Enter"
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "heading \"Card title overflows on narrow screens\""
+    },
+    {
+      "windowTitle": "SL-114 Card title overflows on narrow screens · Slate"
+    },
+    {
+      "announced": "Couldn't save the title of SL-114."
+    },
+    {
+      "screenHas": "button \"Retry\""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "PRB-009",
+  "level": "must",
+  "area": "filter",
+  "situation": [
+    "Open the address #/?labels=perf,nope,bug&q=%20search%20%20results directly with the default data and let the clock run 2200 ms."
+  ],
+  "question": "What is the address now, did the history grow, and which cards are shown?",
+  "answer": "The address is rewritten to #/?q=search+results&labels=bug,perf without a new history entry (the unknown label is dropped, spaces squashed, labels in board order). Only SL-109 is shown.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/?labels=perf,nope,bug&q=%20search%20%20results",
+    "steps": [
+      {
+        "advance": 2200
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/?q=search+results&labels=bug,perf"
+    },
+    {
+      "historyDelta": 0
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-109"
+        ]
+      }
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": []
+      }
+    },
+    {
+      "announced": "1 of 27 cards"
+    }
+  ]
+}

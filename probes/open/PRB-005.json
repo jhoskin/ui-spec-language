@@ -1,0 +1,45 @@
+{
+  "id": "PRB-005",
+  "level": "must",
+  "area": "board loading and failures",
+  "situation": [
+    "Use the fixture profile \"card-down\", in which the first load of a single card fails.",
+    "Open the address #/card/SL-102 directly and let the clock run 400 ms.",
+    "Click the \"Try again\" button with the pointer, then let the clock run 250 ms."
+  ],
+  "question": "What does the window title say now, and how many card loads were requested?",
+  "answer": "The card is shown; the window title is \"SL-102 Fix login redirect loop · Slate\". Two card loads were requested.",
+  "conventional": true,
+  "request": {
+    "profile": "card-down",
+    "start": "#/card/SL-102",
+    "steps": [
+      {
+        "advance": 400
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Try again"
+        }
+      },
+      {
+        "advance": 250
+      }
+    ]
+  },
+  "checks": [
+    {
+      "windowTitle": "SL-102 Fix login redirect loop · Slate"
+    },
+    {
+      "requests": {
+        "op": "loadCard",
+        "count": 2
+      }
+    },
+    {
+      "screenHas": "heading \"Fix login redirect loop\""
+    }
+  ]
+}

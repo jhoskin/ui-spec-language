@@ -1,0 +1,71 @@
+{
+  "id": "PRB-018",
+  "level": "must",
+  "area": "selection and bulk actions",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Select SL-109 (labels bug, ui, perf) and SL-101 (label api) with the x key.",
+    "In the \"Label selected\" group of the selection bar, press the \"docs\" button (put focus on the \"Done\" button of the \"Move selected to\" group, press Tab four times, then Enter). Let the clock run 300 ms."
+  ],
+  "question": "What does the notice say?",
+  "answer": "Added \"docs\" to 1 of 2 cards. A card can have at most 3 labels.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-109"
+        }
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "Home"
+      },
+      {
+        "key": "x"
+      },
+      {
+        "focus": {
+          "role": "button",
+          "name": "Done"
+        }
+      },
+      {
+        "key": "Tab"
+      },
+      {
+        "key": "Tab"
+      },
+      {
+        "key": "Tab"
+      },
+      {
+        "key": "Tab"
+      },
+      {
+        "key": "Enter"
+      },
+      {
+        "advance": 300
+      }
+    ]
+  },
+  "checks": [
+    {
+      "announced": "Added \"docs\" to 1 of 2 cards. A card can have at most 3 labels."
+    },
+    {
+      "requests": {
+        "op": "saveLabels",
+        "count": 1
+      }
+    }
+  ]
+}

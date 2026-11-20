@@ -1,0 +1,53 @@
+{
+  "id": "PRB-046",
+  "level": "must",
+  "area": "comments",
+  "situation": [
+    "Open the address #/card/SL-114 directly and let the clock run 700 ms.",
+    "Click the \"Add a comment\" field, type \"this is Flaky\" and press Control+Enter. The service fails this comment. Let the clock run 500 ms."
+  ],
+  "question": "What is in the comment field, which part has focus, and what message is shown?",
+  "answer": "The text \"this is Flaky\" is back in the field, which has focus. The message says \"Couldn't add the comment. Your text is back in the field.\" The list again shows 2 comments.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "textbox",
+          "name": "Add a comment"
+        }
+      },
+      {
+        "type": "this is Flaky"
+      },
+      {
+        "key": "Control+Enter"
+      },
+      {
+        "advance": 500
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "textbox \"Add a comment\": this is Flaky"
+    },
+    {
+      "focus": {
+        "role": "textarea",
+        "name": "Add a comment"
+      }
+    },
+    {
+      "announced": "Couldn't add the comment. Your text is back in the field."
+    },
+    {
+      "screenHas": "2 comments"
+    }
+  ]
+}

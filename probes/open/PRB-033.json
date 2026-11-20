@@ -1,0 +1,51 @@
+{
+  "id": "PRB-033",
+  "level": "must",
+  "area": "delete and undo",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-103 and press Backspace. Then put focus on SL-105 and press Delete. Do not let the clock run."
+  ],
+  "question": "How many delete requests have been sent, and what does the notice say?",
+  "answer": "One delete request (for SL-103) was sent when its notice was replaced. The notice says \"Deleted SL-105.\" with Undo.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-103"
+        }
+      },
+      {
+        "key": "Backspace"
+      },
+      {
+        "focus": {
+          "card": "SL-105"
+        }
+      },
+      {
+        "key": "Delete"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "requests": {
+        "op": "deleteCard",
+        "count": 1
+      }
+    },
+    {
+      "screenHas": "Deleted SL-105."
+    },
+    {
+      "screenLacks": "Deleted SL-103."
+    }
+  ]
+}

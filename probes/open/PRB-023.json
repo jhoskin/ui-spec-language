@@ -1,0 +1,73 @@
+{
+  "id": "PRB-023",
+  "level": "must",
+  "area": "moving a card by keys and by pointer",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "With the pointer, press on the lower part of card SL-101, move the pressed pointer to the top edge of card SL-113 in Ready, then to the middle of SL-113, and release. Let the clock run 400 ms."
+  ],
+  "question": "What is the order of Ready, and what does the notice say?",
+  "answer": "Ready: SL-111, SL-112, SL-101, SL-113, SL-114, SL-115, SL-116, SL-117. Notice: \"Moved SL-101 to Ready.\"",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "pointer": "down",
+        "on": {
+          "card": "SL-101"
+        },
+        "at": "bottom"
+      },
+      {
+        "pointer": "move",
+        "on": {
+          "card": "SL-113"
+        },
+        "at": "top"
+      },
+      {
+        "pointer": "move",
+        "on": {
+          "card": "SL-113"
+        },
+        "at": "middle"
+      },
+      {
+        "pointer": "up"
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-101",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    },
+    {
+      "announced": "Moved SL-101 to Ready."
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    }
+  ]
+}

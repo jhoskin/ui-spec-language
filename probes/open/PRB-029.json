@@ -1,0 +1,46 @@
+{
+  "id": "PRB-029",
+  "level": "must",
+  "area": "delete and undo",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-110, the last card of Backlog, and press Delete."
+  ],
+  "question": "Which part has focus, and is a delete request sent at this moment?",
+  "answer": "Focus is on SL-109, the card above (there is no next card). No delete request is sent yet.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-110"
+        }
+      },
+      {
+        "key": "Delete"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-109 Search results flicker on slow networks"
+      }
+    },
+    {
+      "requests": {
+        "op": "deleteCard",
+        "count": 0
+      }
+    },
+    {
+      "announced": "Deleted SL-110."
+    }
+  ]
+}

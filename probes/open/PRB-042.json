@@ -1,0 +1,37 @@
+{
+  "id": "PRB-042",
+  "level": "must",
+  "area": "card place",
+  "situation": [
+    "Open the address #/card/SL-109 directly (labels bug, ui, perf) and let the clock run 700 ms."
+  ],
+  "question": "Which label buttons can be pressed, and what note is shown?",
+  "answer": "bug, ui and perf (pressed) can be pressed to remove them; api, docs and blocked are disabled. The note says \"Label limit reached (3)\".",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-109",
+    "steps": [
+      {
+        "advance": 700
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "button \"api\" [disabled]"
+    },
+    {
+      "screenHas": "button \"docs\" [disabled]"
+    },
+    {
+      "screenHas": "button \"blocked\" [disabled]"
+    },
+    {
+      "screenHas": "Label limit reached (3)"
+    },
+    {
+      "screenHas": "button \"ui\" [pressed]"
+    }
+  ]
+}

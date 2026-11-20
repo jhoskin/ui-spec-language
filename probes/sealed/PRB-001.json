@@ -1,0 +1,48 @@
+{
+  "id": "PRB-001",
+  "level": "must",
+  "area": "board loading and failures",
+  "situation": [
+    "Open the board address #/ with the default data. Do nothing else and let the clock run 1400 ms from the start."
+  ],
+  "question": "What does the Done column show at this moment?",
+  "answer": "Done shows no cards yet: placeholder cards and the line \"Still loading…\". Backlog, Ready, In progress and Review already show their cards.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 1400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "Still loading…"
+    },
+    {
+      "order": {
+        "column": "Done",
+        "cards": []
+      }
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    }
+  ]
+}
