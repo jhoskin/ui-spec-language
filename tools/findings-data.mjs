@@ -13,7 +13,9 @@ const must = identifiers(model).filter((x) => x.level === "must" && !["row", "en
 const behavior = (r) => r.failures.some((f) => !f.step.startsWith("(harness"));
 
 function verdict(id, kind, results, lenient) {
-  const scns = model.scenarios.filter((s) => s.verifies.some((v) => v === id || (kind === "table" && v.startsWith(`${id}.`)))).map((s) => s.id);
+  const scns = model.scenarios.filter((s) =>
+    s.verifies.some((v) => v === id || (kind === "table" && v.startsWith(`${id}.`)))
+  ).map((s) => s.id);
   const seen = results.filter((r) => scns.includes(r.id));
   if (!seen.length) return "not run";
   if (seen.some((r) => r.outcome === "failed" && (!lenient || behavior(r)))) return "failed";
@@ -34,10 +36,20 @@ for (const [name, results] of Object.entries(builds)) {
     if (v === "failed") failed.push(x.id);
     if (v === "inapplicable") inapplicable.push(x.id);
   }
-  out.verdicts[name] = { strict: count, withoutHarnessMismatch: lenient, inapplicable, failed: name === "control" ? failed.length : failed };
+  out.verdicts[name] = {
+    strict: count,
+    withoutHarnessMismatch: lenient,
+    inapplicable,
+    failed: name === "control" ? failed.length : failed,
+  };
   out.tasks[name] = Object.fromEntries(model.tasks.map((t) => [t.id, verdict(t.id, "task", results, true)]));
   const n = (o) => results.filter((r) => r.outcome === o).length;
-  out.scenarios[name] = { passed: n("passed"), failed: n("failed"), inapplicable: n("inapplicable"), failedOnBehavior: results.filter((r) => r.outcome === "failed" && behavior(r)).length };
+  out.scenarios[name] = {
+    passed: n("passed"),
+    failed: n("failed"),
+    inapplicable: n("inapplicable"),
+    failedOnBehavior: results.filter((r) => r.outcome === "failed" && behavior(r)).length,
+  };
 }
 const burned = ["PRB-025"];
 for (const [name, file] of [["port", "terminal"], ["control", "control"], ["web", "web"]]) {
@@ -53,6 +65,10 @@ for (const [name, file] of [["port", "terminal"], ["control", "control"], ["web"
     unburned: tally(open.filter((r) => !burned.includes(r.id))),
     sealed: tally(sealed),
   };
-  if (name === "control") for (const k of Object.keys(out.probes.control)) out.probes.control[k].failed = out.probes.control[k].failed.length;
+  if (name === "control") {
+    for (const k of Object.keys(out.probes.control)) {
+      out.probes.control[k].failed = out.probes.control[k].failed.length;
+    }
+  }
 }
 console.log(JSON.stringify(out, null, 1));
