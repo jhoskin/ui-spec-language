@@ -1,9 +1,9 @@
-node_modules/
 __pycache__/
-*.pyc
 .DS_Store
-/out/
-TRASH/
-TRASH-*/
 *.bak
 *.bak.*
+*.pyc
+/out/
+node_modules/
+TRASH-*/
+TRASH/
