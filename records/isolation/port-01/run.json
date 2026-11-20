@@ -1,0 +1,119 @@
+{
+  "role": "port",
+  "run": "01",
+  "model": "opus",
+  "tools": "Read,Write,Edit,Glob,Grep,Bash",
+  "started": "2026-11-20T14:28:43.667Z",
+  "ended": "2026-11-20T15:04:58.047Z",
+  "promptSha256": "d65764f08990cf4adbe5483b13149e6f2918c09e5cbaf8e72ce4287249cc7b38",
+  "manifest": [
+    {
+      "path": "spec/app.md",
+      "sha256": "4f67f5758981898e8dee3d35df5a0c1941c047a67766c44a407510c0fb1757d7"
+    },
+    {
+      "path": "spec/appearance.md",
+      "sha256": "54b5679ce0e3ab626751212bc457369131b9f3f8fceb94155208d0190c501ac9"
+    },
+    {
+      "path": "spec/conventions.md",
+      "sha256": "5e449738d0b6de9408c3f1c1f21e5cbb55bcb8cc2ac83d76e7067b16a99ec554"
+    },
+    {
+      "path": "spec/data.md",
+      "sha256": "920dca72a2d0141869967ba1191d875bc7bc25fbe9b49125ce784474c64f245c"
+    },
+    {
+      "path": "spec/modality/terminal.md",
+      "sha256": "33dc11d4612adb53eb6bd9ece2c1e7402020038b4c3817c2de4cc8a01b196780"
+    },
+    {
+      "path": "spec/modality/web.md",
+      "sha256": "10957722844b871c7d8cfff384c2a5b26d2143c361b6fe32cfb7ac95dc376a36"
+    },
+    {
+      "path": "spec/places/board.md",
+      "sha256": "df99c4da848925c392c3f932978cc689c8a70dd77925e893f350e754b412daea"
+    },
+    {
+      "path": "spec/places/card.md",
+      "sha256": "5ef3383e551a9abb7f6a4e95d4e8844fe060e4427559d7a6d6f8523d56cdb56a"
+    },
+    {
+      "path": "spec/places/missing.md",
+      "sha256": "ab65b35596a98024385db5303e6797f3aa62b697a8af3a81954dcb4e14fe6ac6"
+    },
+    {
+      "path": "spec/tasks.md",
+      "sha256": "d8092244e80f9a95031f5b1d618f065a4d25cdb11d72de8ce60f275d0e46c61f"
+    },
+    {
+      "path": "fixture/data.json",
+      "sha256": "a6b159ceece3c05adbdf6d74359557b76c81a1b6867ef7c60d871d829f67791e"
+    },
+    {
+      "path": "fixture/fixture.md",
+      "sha256": "c795c9659b48d710e5ff87a24ff329e353e0bdeb0e5e2f12ca17207954da46f8"
+    },
+    {
+      "path": "fixture/harness.md",
+      "sha256": "2558fdacc4cf6f61c54d62a60bb53f3bfec109b6c4aca8e1a1ac3bf1c48b2927"
+    },
+    {
+      "path": "fixture/service.json",
+      "sha256": "e60b616b3dec3447c0cf8d45c7d2756288d34c073581f83d52dc91ecc03ec9ee"
+    },
+    {
+      "path": "fixture/vectors.json",
+      "sha256": "47490d04801a44ee72dbe0c57809ff3896bfdcfc4786a77c5af771e4de96dc1b"
+    },
+    {
+      "path": "scenarios/README.md",
+      "sha256": "1bd57ba0679f77f9dcaaf354e466ae218596734b711ad4cc2d8228a9d0eda6e0"
+    },
+    {
+      "path": "scenarios/board-load.md",
+      "sha256": "9fa7456a533d5e869bd5c47fed056a002963b547dc97fc2240068fdb2a699d3a"
+    },
+    {
+      "path": "scenarios/bulk.md",
+      "sha256": "8d81ba22bc8f82ba99db00a1ac0d3bb3fd1def3b9ae236f9cc0a1c300a5ff1f5"
+    },
+    {
+      "path": "scenarios/card.md",
+      "sha256": "7dc75079709207f2036fe65e7df401671e5abdc12874d95fb58fff96fcfbc11b"
+    },
+    {
+      "path": "scenarios/carry-move.md",
+      "sha256": "2b4a82fe48542790cf3c1f7d7b5d01171922dc988135183d3fbfbea36cd4464b"
+    },
+    {
+      "path": "scenarios/comments.md",
+      "sha256": "bfe0dc71786ebc8cf7a5766213343b6505f034d0ea8f40456575af1471412540"
+    },
+    {
+      "path": "scenarios/delete.md",
+      "sha256": "bd9bae9fd20dd74e9b8bcdad3a3a460d04a5a1193ff305310ebbbc9813b744ad"
+    },
+    {
+      "path": "scenarios/filter.md",
+      "sha256": "25769aa3dcb0166d84b82b2bcd6d3e253262649f1c4adfd0dd38d30ec6df2570"
+    },
+    {
+      "path": "scenarios/focus-selection.md",
+      "sha256": "fbe90b8efe804c33176ac333c0776a85208482dccb098f487bc7b2dd4c7dcf24"
+    },
+    {
+      "path": "scenarios/navigation.md",
+      "sha256": "da59c072bf1ea3927dcf7b21884b14cf9a63a70d7cedb6a357ebe91cb13e652e"
+    },
+    {
+      "path": "sidecar/matrix.md",
+      "sha256": "415826583de7f09c4ae0ed314528462c66fe9c2b1e429b58f2c23c807dfb7687"
+    }
+  ],
+  "transcriptSha256": "62b658934c615554c1ff44981a2aced26d17013f94e5d5be872bc73d1194f232",
+  "toolCalls": 85,
+  "violations": [],
+  "clean": true
+}

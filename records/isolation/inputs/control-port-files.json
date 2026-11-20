@@ -1,0 +1,46 @@
+[
+ {
+  "from": "out/inventory/fixture/data.json",
+  "to": "fixture/data.json"
+ },
+ {
+  "from": "out/inventory/fixture/fixture.md",
+  "to": "fixture/fixture.md"
+ },
+ {
+  "from": "out/inventory/fixture/harness.md",
+  "to": "fixture/harness.md"
+ },
+ {
+  "from": "out/inventory/fixture/service.json",
+  "to": "fixture/service.json"
+ },
+ {
+  "from": "out/inventory/fixture/vectors.json",
+  "to": "fixture/vectors.json"
+ },
+ {
+  "from": "out/inventory/spec/app.md",
+  "to": "spec/app.md"
+ },
+ {
+  "from": "out/inventory/spec/conventions.md",
+  "to": "spec/conventions.md"
+ },
+ {
+  "from": "out/inventory/spec/modality/terminal.md",
+  "to": "spec/modality/terminal.md"
+ },
+ {
+  "from": "out/inventory/spec/places/board.md",
+  "to": "spec/places/board.md"
+ },
+ {
+  "from": "out/inventory/spec/places/card.md",
+  "to": "spec/places/card.md"
+ },
+ {
+  "from": "out/inventory/spec/places/missing.md",
+  "to": "spec/places/missing.md"
+ }
+]
