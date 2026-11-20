@@ -1,0 +1,6 @@
+{
+  // Default rules, line length off.
+  "config": { "MD013": false },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules", "tui/**/node_modules"]
+}
