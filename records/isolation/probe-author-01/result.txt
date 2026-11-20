@@ -1,0 +1,44 @@
+All 52 probes are in `probes/`, and the checker passes on the running application.
+
+**By level:** 50 must, 2 should.
+
+**By area** (no area has more than 8):
+
+| Area | Probes |
+| --- | --- |
+| delete and undo | 6 |
+| board loading and failures | 5 |
+| filter | 5 |
+| selection and bulk actions | 5 |
+| moving a card by keys and by pointer | 5 |
+| save failures, rollback and retry | 5 |
+| card place (title, labels, assignee, description) | 5 |
+| comments | 5 |
+| focus and keys on the board | 4 |
+| navigation, history, reload and unknown addresses | 4 |
+| notice | 3 |
+
+Most probes test behavior that differs from what most applications do. Some examples:
+- The "Still loading…" line, the filter's 250 ms delay and the delete notice's 8000 ms are each probed on both sides of the limit.
+- With the Ready column failed, the count line says "20 cards".
+- Arrow keys skip an empty column when moving focus, but not when carrying a card.
+- A card dropped under a filter goes directly after the visible card above it.
+- A failed bulk move puts the card back at its old index and selects it again.
+- Undo stops working once the notice ends, and Control+Z inside a text field does nothing.
+- A blank title draft left with Tab is dropped without a message.
+- Escape on a card opened from the board goes Back; on a card reached by a typed address, it adds a new history entry.
+
+**Gaps:**
+- **Assignee:** no probe covers it. Labels and description are covered.
+- **Reload:** no probe covers it. A reload keeps the filter in the address, but the service double also resets the data, so I left it out.
+- **Retry into a full column:** no probe covers it. I couldn't find a way to fill In progress without the new notice replacing the error notice, so there was never a Retry button to press.
+
+**Checker limitation:** the checker's column parser can't see SL-117. Its title has a colon, so its accessibility line is quoted. SL-117 is left out of every `order` check, but the answers still name it. In PRB-022 I check the In progress count line ("3 cards") instead of its order.
+
+I left two helper scripts in the work directory: `run.py` (exploration) and `make_probes.py` (writes the probe files). The driver's files are still in `requests/` and `results/`.
+
+Last line printed by `check_probes.py`:
+
+```
+52 probes, 0 with a check that does not hold
+```

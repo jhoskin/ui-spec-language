@@ -1,0 +1,73 @@
+{
+  "id": "PRB-036",
+  "level": "must",
+  "area": "notice",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-101, press Space, ArrowRight, Space, and let the clock run 400 ms (the move succeeds).",
+    "Let the clock run 8000 ms more. Press Control+Z and let the clock run 400 ms."
+  ],
+  "question": "Is the notice shown, where is SL-101, and how many move requests were sent?",
+  "answer": "The notice is gone and Control+Z does nothing: SL-101 stays first in Ready. Only one move request was sent.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-101"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      },
+      {
+        "advance": 8000
+      },
+      {
+        "key": "Control+z"
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenLacks": "Moved SL-101 to Ready."
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-101",
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    }
+  ]
+}

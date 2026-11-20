@@ -1,0 +1,44 @@
+{
+  "id": "PRB-051",
+  "level": "must",
+  "area": "navigation, history, reload and unknown addresses",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Enter the address #/card/SL-999 in the address bar while the app runs. Do not let the clock run."
+  ],
+  "question": "What does the page show, what is the window title, and was a card load requested?",
+  "answer": "At once: the heading \"Card not found\" and \"There is no card SL-999 on this board.\" with a link \"Go to the board\". Window title \"Not found · Slate\". No card load is requested.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "address": "#/card/SL-999"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "heading \"Card not found\""
+    },
+    {
+      "screenHas": "There is no card SL-999 on this board."
+    },
+    {
+      "windowTitle": "Not found · Slate"
+    },
+    {
+      "requests": {
+        "op": "loadCard",
+        "count": 0
+      }
+    },
+    {
+      "address": "#/card/SL-999"
+    }
+  ]
+}

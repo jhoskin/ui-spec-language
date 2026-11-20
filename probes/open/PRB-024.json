@@ -1,0 +1,67 @@
+{
+  "id": "PRB-024",
+  "level": "must",
+  "area": "moving a card by keys and by pointer",
+  "situation": [
+    "Open the address #/?q=fix directly with the default data and let the clock run 2200 ms (Backlog shows only SL-102; Ready only SL-111).",
+    "Put focus on SL-111, press Space, ArrowLeft, ArrowDown, then Space. Let the clock run 400 ms, then click \"Clear filters\"."
+  ],
+  "question": "What is the order of the first four cards of Backlog?",
+  "answer": "SL-101, SL-102, SL-111, SL-103: SL-111 goes directly after SL-102, the visible card above it, not to the end of Backlog.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/?q=fix",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-111"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowLeft"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Clear filters"
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-111",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    }
+  ]
+}

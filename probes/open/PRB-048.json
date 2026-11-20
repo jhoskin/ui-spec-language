@@ -1,0 +1,47 @@
+{
+  "id": "PRB-048",
+  "level": "must",
+  "area": "comments",
+  "situation": [
+    "Open the address #/card/SL-120 directly and let the clock run 700 ms. The service fails the first comment load of SL-120.",
+    "Click the \"Retry\" button in the Comments section and let the clock run 300 ms."
+  ],
+  "question": "What does the Comments section show now?",
+  "answer": "The heading \"2 comments\" and both comments, first \"Ana Ruiz · 17 Nov 2026, 11:15\". The comment field is enabled.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-120",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Retry"
+        }
+      },
+      {
+        "advance": 300
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "2 comments"
+    },
+    {
+      "screenHas": "Ana Ruiz · 17 Nov 2026, 11:15"
+    },
+    {
+      "screenLacks": "Couldn't load comments."
+    },
+    {
+      "requests": {
+        "op": "loadComments",
+        "count": 2
+      }
+    }
+  ]
+}

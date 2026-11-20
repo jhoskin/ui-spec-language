@@ -1,0 +1,69 @@
+{
+  "id": "PRB-010",
+  "level": "must",
+  "area": "filter",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "In the filter area, click the label button \"ui\", then \"bug\", then the assignee button \"Mika Ito\", then \"Ana Ruiz\"."
+  ],
+  "question": "Which cards are shown, and what is the address?",
+  "answer": "Only cards with both labels bug and ui whose assignee is either Mika Ito or Ana Ruiz: SL-109 in Backlog and SL-114 in Ready. The address is #/?labels=bug,ui&who=ana,mika.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "ui"
+        }
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "bug"
+        }
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Mika Ito"
+        }
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Ana Ruiz"
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-109"
+        ]
+      }
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-114"
+        ]
+      }
+    },
+    {
+      "address": "#/?labels=bug,ui&who=ana,mika"
+    },
+    {
+      "announced": "2 of 27 cards"
+    }
+  ]
+}

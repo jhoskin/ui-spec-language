@@ -1,0 +1,57 @@
+{
+  "id": "PRB-040",
+  "level": "must",
+  "area": "card place",
+  "situation": [
+    "Open the address #/card/SL-114 directly and let the clock run 700 ms.",
+    "Click \"Edit title\", replace the text of the Title field with 80 letters \"a\", and press Enter."
+  ],
+  "question": "Is the title accepted, which part has focus, and was a save sent?",
+  "answer": "Yes. The heading shows the 80 letters and has focus; one title save is sent.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Edit title"
+        }
+      },
+      {
+        "fill": {
+          "role": "textbox",
+          "name": "Title"
+        },
+        "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "key": "Enter"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "requests": {
+        "op": "saveTitle",
+        "count": 1
+      }
+    },
+    {
+      "focus": {
+        "role": "h1",
+        "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    },
+    {
+      "windowTitle": "SL-114 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa · Slate"
+    },
+    {
+      "screenLacks": "at most 80"
+    }
+  ]
+}

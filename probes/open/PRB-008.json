@@ -1,0 +1,41 @@
+{
+  "id": "PRB-008",
+  "level": "must",
+  "area": "filter",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Press \"/\", type \"sl-125\" and press Enter at once, without letting the clock run."
+  ],
+  "question": "Which part has focus now?",
+  "answer": "Focus moves to the only matching card, SL-125 Remove legacy export.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "key": "/"
+      },
+      {
+        "type": "sl-125"
+      },
+      {
+        "key": "Enter"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-125 Remove legacy export"
+      }
+    },
+    {
+      "address": "#/?q=sl-125"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+You write held-out probes for a small web application, Slate (a kanban issue tracker with mock data). The probes test whether a written specification of Slate carries its design decisions. You have not seen that specification and you will not see it.
+
+Your work directory holds:
+
+- `web/`: the source of the application (the reference build).
+- `fixture/`: the fixed data set, the service table (latency, faults, profiles) and `fixture.md`.
+- `driver-guide.md`: how to drive the running application through request files.
+- `probe-guide.md`: what a probe is and the file format. Read it first and follow it exactly.
+- `check_probes.py`: runs every probe through the driver and prints the checks that do not hold.
+
+You cannot use the network. Use `/opt/homebrew/bin/python3` for Python. Write temporary files only in your work directory.
+
+Do this:
+
+1. Read `probe-guide.md` and `driver-guide.md`. Read the source to find decisions. Then explore the running application with the driver: the clock, the fault profiles, keys, the pointer, Back, Forward, reload and addresses entered while it runs.
+2. Write 52 probes in `probes/`, `PRB-001.json` to `PRB-052.json`. At least 38 are must-level. Cover every area that the guide lists. Look hardest for behavior that differs from what most applications do, and for behavior on both sides of a timer or a limit.
+3. Take every answer from the running application, not from the source alone. Where they differ, the running application is right.
+4. Run `/opt/homebrew/bin/python3 check_probes.py` and fix or replace each probe until it prints "52 probes, 0 with a check that does not hold".
+5. Each `situation` must be complete enough that a person who cannot see the application can follow it, and must not give away the answer.
+
+When you are done, reply with the count of probes by area and by level, and the last line that `check_probes.py` printed.

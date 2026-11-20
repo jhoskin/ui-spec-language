@@ -1,0 +1,79 @@
+{
+  "id": "PRB-038",
+  "level": "must",
+  "area": "notice",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-101, press Space, ArrowRight, Space, and let the clock run 400 ms (the move succeeds).",
+    "Press \"/\" to put focus in the filter field, press Control+Z, and let the clock run 400 ms."
+  ],
+  "question": "Where is SL-101, how many move requests were sent, and is the notice shown?",
+  "answer": "SL-101 stays first in Ready; Control+Z in the text field does not undo. One move request. The notice \"Moved SL-101 to Ready.\" is still shown.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-101"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      },
+      {
+        "key": "/"
+      },
+      {
+        "key": "Control+z"
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-101",
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    },
+    {
+      "screenHas": "Moved SL-101 to Ready."
+    },
+    {
+      "focus": {
+        "role": "input",
+        "name": "Filter cards"
+      }
+    }
+  ]
+}

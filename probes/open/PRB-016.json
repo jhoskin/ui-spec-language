@@ -1,0 +1,75 @@
+{
+  "id": "PRB-016",
+  "level": "must",
+  "area": "selection and bulk actions",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-101 and press x; press ArrowDown and x; press ArrowDown and x (SL-101, SL-102 and SL-103 are selected).",
+    "Click the button \"In progress\" in the \"Move selected to\" group, then let the clock run 400 ms."
+  ],
+  "question": "Which cards are in In progress, what does the notice say, and what stays selected?",
+  "answer": "In progress has SL-118, SL-119, SL-101 (limit 3). The notice says \"Moved 1 of 3 cards to In progress. In progress is full (3 cards).\" with Undo. SL-102 and SL-103 stay selected (\"2 selected\").",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-101"
+        }
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "x"
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "In progress"
+        }
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "In progress",
+        "cards": [
+          "SL-118",
+          "SL-119",
+          "SL-101"
+        ]
+      }
+    },
+    {
+      "announced": "Moved 1 of 3 cards to In progress. In progress is full (3 cards)."
+    },
+    {
+      "screenHas": "2 selected"
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    }
+  ]
+}

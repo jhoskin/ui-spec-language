@@ -1,0 +1,71 @@
+{
+  "id": "PRB-034",
+  "level": "must",
+  "area": "delete and undo",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-114 and press Enter to open it. Let the clock run 300 ms.",
+    "Click the \"Delete card\" button."
+  ],
+  "question": "What is the address, which part has focus, and what does the notice say?",
+  "answer": "The board at #/ (the app went Back). Focus is on the \"Board\" heading. SL-114 is gone from Ready. Notice: \"Deleted SL-114.\" with Undo.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-114"
+        }
+      },
+      {
+        "key": "Enter"
+      },
+      {
+        "advance": 300
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Delete card"
+        }
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/"
+    },
+    {
+      "focus": {
+        "role": "h1",
+        "name": "Board"
+      }
+    },
+    {
+      "announced": "Deleted SL-114."
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    },
+    {
+      "requests": {
+        "op": "deleteCard",
+        "count": 0
+      }
+    }
+  ]
+}

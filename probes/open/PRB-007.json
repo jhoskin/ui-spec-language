@@ -1,0 +1,58 @@
+{
+  "id": "PRB-007",
+  "level": "must",
+  "area": "filter",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Press \"/\" and type \"login fix\" into the field that takes focus.",
+    "Let the clock run 250 ms."
+  ],
+  "question": "What is the address, did the history grow, and which cards do Backlog and Ready show?",
+  "answer": "The address is #/?q=login+fix and replaces the entry (no new history entry). Backlog shows only SL-102, Ready only SL-111; the count says \"2 of 27 cards\".",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "key": "/"
+      },
+      {
+        "type": "login fix"
+      },
+      {
+        "advance": 250
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/?q=login+fix"
+    },
+    {
+      "historyDelta": 0
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-102"
+        ]
+      }
+    },
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111"
+        ]
+      }
+    },
+    {
+      "announced": "2 of 27 cards"
+    }
+  ]
+}

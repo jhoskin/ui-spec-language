@@ -1,0 +1,53 @@
+{
+  "id": "PRB-006",
+  "level": "must",
+  "area": "filter",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Press \"/\" and type \"login fix\" into the field that takes focus.",
+    "Let the clock run 249 ms."
+  ],
+  "question": "What is the address, and which cards does the Backlog column show?",
+  "answer": "The address is still #/ and Backlog still shows all 10 cards; the filter has not been applied yet.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "key": "/"
+      },
+      {
+        "type": "login fix"
+      },
+      {
+        "advance": 249
+      }
+    ]
+  },
+  "checks": [
+    {
+      "address": "#/"
+    },
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "PRB-039",
+  "level": "must",
+  "area": "card place",
+  "situation": [
+    "Open the address #/card/SL-114 directly and let the clock run 700 ms.",
+    "Click \"Edit title\", replace the text of the Title field with 81 letters \"b\", and press Enter."
+  ],
+  "question": "What message is shown, which part has focus, and was a save sent?",
+  "answer": "\"A title can have at most 80 characters.\" Focus stays in the Title field. No save is sent.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-114",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Edit title"
+        }
+      },
+      {
+        "fill": {
+          "role": "textbox",
+          "name": "Title"
+        },
+        "value": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      {
+        "key": "Enter"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "announced": "A title can have at most 80 characters."
+    },
+    {
+      "screenHas": "A title can have at most 80 characters."
+    },
+    {
+      "focus": {
+        "role": "input",
+        "name": "Title"
+      }
+    },
+    {
+      "requests": {
+        "op": "saveTitle",
+        "count": 0
+      }
+    }
+  ]
+}

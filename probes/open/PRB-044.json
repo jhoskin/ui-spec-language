@@ -1,0 +1,53 @@
+{
+  "id": "PRB-044",
+  "level": "must",
+  "area": "comments",
+  "situation": [
+    "Open the address #/card/SL-110 directly and let the clock run 700 ms, then 64000 ms more.",
+    "Click the \"Add a comment\" field, type \"  First note \" and press Control+Enter. Let the clock run 499 ms."
+  ],
+  "question": "What does the new comment show, and can the user type in the comment field?",
+  "answer": "The comment \"First note\" is at the end, by Mika Ito, with \"Sending…\" in place of the time. The comment field and the \"Add comment\" button are disabled.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/card/SL-110",
+    "steps": [
+      {
+        "advance": 700
+      },
+      {
+        "advance": 64000
+      },
+      {
+        "click": {
+          "role": "textbox",
+          "name": "Add a comment"
+        }
+      },
+      {
+        "type": "  First note "
+      },
+      {
+        "key": "Control+Enter"
+      },
+      {
+        "advance": 499
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "Mika Ito · Sending…"
+    },
+    {
+      "screenHas": "textbox \"Add a comment\" [disabled]"
+    },
+    {
+      "requests": {
+        "op": "addComment",
+        "count": 1
+      }
+    }
+  ]
+}

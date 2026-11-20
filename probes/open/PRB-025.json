@@ -1,0 +1,72 @@
+{
+  "id": "PRB-025",
+  "level": "must",
+  "area": "save failures, rollback and retry",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-107, press Space, ArrowRight, Space. The service fails this move. Let the clock run 400 ms."
+  ],
+  "question": "Where is SL-107, which part has focus, and what does the notice say?",
+  "answer": "SL-107 is back in Backlog at its old place (after SL-106). Focus stays on SL-107. Notice: \"Couldn't move SL-107. It is back in Backlog.\" with Retry and Dismiss.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-107"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Backlog",
+        "cards": [
+          "SL-101",
+          "SL-102",
+          "SL-103",
+          "SL-104",
+          "SL-105",
+          "SL-106",
+          "SL-107",
+          "SL-108",
+          "SL-109",
+          "SL-110"
+        ]
+      }
+    },
+    {
+      "focus": {
+        "role": "group",
+        "name": "SL-107 Migrate avatars to object storage"
+      }
+    },
+    {
+      "announced": "Couldn't move SL-107. It is back in Backlog."
+    },
+    {
+      "screenHas": "button \"Retry\""
+    },
+    {
+      "screenHas": "button \"Dismiss\""
+    }
+  ]
+}

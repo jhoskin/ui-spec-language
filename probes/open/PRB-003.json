@@ -1,0 +1,35 @@
+{
+  "id": "PRB-003",
+  "level": "must",
+  "area": "board loading and failures",
+  "situation": [
+    "Use the fixture profile \"column-down\", in which the first load of the Ready column fails.",
+    "Open the board address #/ and let the clock run 2200 ms."
+  ],
+  "question": "What does the Ready column show, and what card count does the line under the filters give?",
+  "answer": "Ready shows \"Couldn't load Ready.\" and a Retry button (named \"Retry Ready\"). The count line says \"20 cards\": the cards of the loaded columns only.",
+  "conventional": false,
+  "request": {
+    "profile": "column-down",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenHas": "Couldn't load Ready."
+    },
+    {
+      "screenHas": "button \"Retry Ready\""
+    },
+    {
+      "announced": "20 cards"
+    },
+    {
+      "screenLacks": "27 cards"
+    }
+  ]
+}

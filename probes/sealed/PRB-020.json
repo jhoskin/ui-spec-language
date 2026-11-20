@@ -1,0 +1,63 @@
+{
+  "id": "PRB-020",
+  "level": "must",
+  "area": "moving a card by keys and by pointer",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-102, press Space, ArrowRight, ArrowDown, then Space. Do not let the clock run."
+  ],
+  "question": "Where is SL-102 now, what mark does it carry, and how many move requests were sent?",
+  "answer": "SL-102 is in Ready as the third card (after SL-111, SL-112) with the mark \"Saving…\". One move request was sent.",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-102"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "ArrowDown"
+      },
+      {
+        "key": "Space"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-102",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116"
+        ]
+      }
+    },
+    {
+      "screenHas": "Saving…"
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 1
+      }
+    }
+  ]
+}

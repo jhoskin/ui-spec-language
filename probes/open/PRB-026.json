@@ -1,0 +1,73 @@
+{
+  "id": "PRB-026",
+  "level": "must",
+  "area": "save failures, rollback and retry",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on SL-107, press Space, ArrowRight, Space. The service fails this move. Let the clock run 400 ms.",
+    "Click \"Retry\" in the notice and let the clock run 400 ms."
+  ],
+  "question": "Where is SL-107 now, and what does the notice say?",
+  "answer": "SL-107 is in Ready between SL-116 and SL-117 (the place first chosen). Notice: \"Moved SL-107 to Ready.\"",
+  "conventional": true,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-107"
+        }
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "key": "ArrowRight"
+      },
+      {
+        "key": "Space"
+      },
+      {
+        "advance": 400
+      },
+      {
+        "click": {
+          "role": "button",
+          "name": "Retry"
+        }
+      },
+      {
+        "advance": 400
+      }
+    ]
+  },
+  "checks": [
+    {
+      "order": {
+        "column": "Ready",
+        "cards": [
+          "SL-111",
+          "SL-112",
+          "SL-113",
+          "SL-114",
+          "SL-115",
+          "SL-116",
+          "SL-107"
+        ]
+      }
+    },
+    {
+      "announced": "Moved SL-107 to Ready."
+    },
+    {
+      "requests": {
+        "op": "moveCards",
+        "count": 2
+      }
+    }
+  ]
+}

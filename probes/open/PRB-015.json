@@ -1,0 +1,43 @@
+{
+  "id": "PRB-015",
+  "level": "must",
+  "area": "selection and bulk actions",
+  "situation": [
+    "Start at the board address #/ with the default data and let the clock run 2200 ms, so that every column has loaded.",
+    "Put focus on card SL-111 and press x. Then press Shift+X (capital X). Then press Shift+X again."
+  ],
+  "question": "How many cards are selected at the end?",
+  "answer": "None. The first Shift+X selected the rest of Ready (7 selected); the second Shift+X, with every card of Ready selected, cleared them all. The selection bar is gone.",
+  "conventional": false,
+  "request": {
+    "profile": "default",
+    "start": "#/",
+    "steps": [
+      {
+        "advance": 2200
+      },
+      {
+        "focus": {
+          "card": "SL-111"
+        }
+      },
+      {
+        "key": "x"
+      },
+      {
+        "key": "Shift+X"
+      },
+      {
+        "key": "Shift+X"
+      }
+    ]
+  },
+  "checks": [
+    {
+      "screenLacks": "region \"Selection\""
+    },
+    {
+      "screenLacks": "selected"
+    }
+  ]
+}
