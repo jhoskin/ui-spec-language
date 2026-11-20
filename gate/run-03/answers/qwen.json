@@ -1,0 +1,348 @@
+{
+ "answers": [
+  {
+   "id": "PRB-003",
+   "answer": "Ready column shows \"Couldn't load Ready.\" with a \"Retry\" action. The count line shows \"20 cards\".",
+   "basis": "STATED",
+   "cites": [
+    "SCN-BRD-3",
+    "COL-2",
+    "DAT-2"
+   ]
+  },
+  {
+   "id": "PRB-004",
+   "answer": "User sees Board.Ready with all columns loaded. 2 board loads were requested. Focus remains none (or unchanged).",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-BRD-2",
+    "NAV-T1.1"
+   ]
+  },
+  {
+   "id": "PRB-005",
+   "answer": "Window title: \"Fix login redirect loop · Slate\". 2 card loads were requested.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CRD-2",
+    "WEB-2"
+   ]
+  },
+  {
+   "id": "PRB-006",
+   "answer": "Address: \"#/\" (no filter). Backlog shows SL-101, SL-102, SL-103, SL-104, SL-105, SL-106, SL-107, SL-108, SL-109, SL-110.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-FLT-1"
+   ]
+  },
+  {
+   "id": "PRB-007",
+   "answer": "Address: \"#/?q=login+fix\". History did not grow (depth unchanged). Backlog shows SL-102. Ready shows SL-111.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-FLT-1"
+   ]
+  },
+  {
+   "id": "PRB-008",
+   "answer": "Focus remains in the \"Filter cards\" field.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-FLT-3",
+    "FLT-8"
+   ]
+  },
+  {
+   "id": "PRB-009",
+   "answer": "Address: \"#/?q=search+results&labels=bug,perf\". History depth is 1. Only SL-109 is shown.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-NAV-4",
+    "DAT-5"
+   ]
+  },
+  {
+   "id": "PRB-011",
+   "answer": "Focus moves to card SL-121.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-FCS-1"
+   ]
+  },
+  {
+   "id": "PRB-013",
+   "answer": "Focus moves to the next card in board order (SL-104).",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-FCS-1",
+    "WEB-6"
+   ]
+  },
+  {
+   "id": "PRB-014",
+   "answer": "Address: \"#/\". Focus moves to card SL-101.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-FLT-4",
+    "DIS-T1.2",
+    "DIS-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-015",
+   "answer": "0 cards are selected.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-SEL-1"
+   ]
+  },
+  {
+   "id": "PRB-016",
+   "answer": "In progress: SL-118, SL-119, SL-101. Notice: \"Moved 1 of 3 cards to In progress. In progress is full (3 cards).\" with \"Undo\". Selected: SL-102, SL-103.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-BLK-1"
+   ]
+  },
+  {
+   "id": "PRB-017",
+   "answer": "Notice: \"Moved 2 of 3 cards to Review. Couldn't move SL-107.\" with \"Retry\". Selected: SL-107. Backlog: SL-101, SL-102, SL-103, SL-104, SL-105, SL-106, SL-107, SL-109, SL-110. Review: SL-106, SL-108.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-BLK-2"
+   ]
+  },
+  {
+   "id": "PRB-019",
+   "answer": "2 cards are selected (SL-111, SL-114).",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-SEL-1",
+    "FLT-6",
+    "SEL-4"
+   ]
+  },
+  {
+   "id": "PRB-021",
+   "answer": "Column: Review. Notice: \"Moved SL-119 to Review.\" with \"Undo\".",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CRY-1",
+    "CRY-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-022",
+   "answer": "SL-116 is in Ready. Notice: \"In progress is full (3 cards).\" with no action. Move requests sent: 1.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CRY-5",
+    "CRY-T1.2"
+   ]
+  },
+  {
+   "id": "PRB-023",
+   "answer": "Ready order: SL-111, SL-112, SL-101, SL-113, SL-114, SL-115, SL-116, SL-117. Notice: \"Moved SL-101 to Ready.\" with \"Undo\".",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CRY-3",
+    "CRY-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-024",
+   "answer": "Backlog first four: SL-111, SL-102, SL-103, SL-104.",
+   "basis": "DERIVED",
+   "cites": [
+    "DAT-6",
+    "CRY-T1.3",
+    "FLT-6"
+   ]
+  },
+  {
+   "id": "PRB-025",
+   "answer": "SL-107 is in Backlog. Focus: SL-107. Notice: \"Couldn't move SL-107. It is back in Backlog.\" with \"Retry\".",
+   "basis": "STATED",
+   "cites": [
+    "SCN-MOV-1",
+    "SCN-MOV-2"
+   ]
+  },
+  {
+   "id": "PRB-026",
+   "answer": "SL-107 is in Ready. Notice: \"Moved SL-107 to Ready.\" with \"Undo\".",
+   "basis": "STATED",
+   "cites": [
+    "SCN-MOV-1"
+   ]
+  },
+  {
+   "id": "PRB-028",
+   "answer": "SL-108 is in Backlog. Notice: \"Couldn't undo the move of SL-108.\" with \"Retry\".",
+   "basis": "STATED",
+   "cites": [
+    "SCN-MOV-3"
+   ]
+  },
+  {
+   "id": "PRB-029",
+   "answer": "Focus: SL-102. Delete request sent: No (0).",
+   "basis": "STATED",
+   "cites": [
+    "SCN-DEL-1"
+   ]
+  },
+  {
+   "id": "PRB-030",
+   "answer": "Delete request sent: No. Notice still shown: Yes.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-DEL-1",
+    "NTC-2"
+   ]
+  },
+  {
+   "id": "PRB-031",
+   "answer": "Delete request sent: Yes (1). Notice still shown: No.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-DEL-1",
+    "NTC-2"
+   ]
+  },
+  {
+   "id": "PRB-032",
+   "answer": "SL-105 is in Backlog. Focus: SL-101. Delete request sent: No.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-DEL-1"
+   ]
+  },
+  {
+   "id": "PRB-033",
+   "answer": "Delete requests sent: 1. Notice shown: \"Deleted SL-105.\" with \"Undo\".",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-DEL-1",
+    "NTC-1"
+   ]
+  },
+  {
+   "id": "PRB-035",
+   "answer": "SL-125 is in Done. Notice: \"Couldn't delete SL-125. It is back in Done.\" with \"Retry\".",
+   "basis": "STATED",
+   "cites": [
+    "SCN-DEL-2"
+   ]
+  },
+  {
+   "id": "PRB-037",
+   "answer": "Notice still shown: Yes.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-MOV-1",
+    "NTC-3"
+   ]
+  },
+  {
+   "id": "PRB-038",
+   "answer": "SL-101 is in Ready. Move requests sent: 1. Notice shown: Yes.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-MOV-1",
+    "WEB-4",
+    "NTC-2"
+   ]
+  },
+  {
+   "id": "PRB-039",
+   "answer": "Message: \"A title can have at most 80 characters.\" Focus: Title field. Save sent: No.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-TTL-1"
+   ]
+  },
+  {
+   "id": "PRB-040",
+   "answer": "Title accepted: Yes. Focus: Place title. Save sent: Yes.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-TTL-1"
+   ]
+  },
+  {
+   "id": "PRB-041",
+   "answer": "Title shown: \"Card title overflows on narrow screens\". Message shown: Yes (\"A title needs at least 1 character.\"). Save sent: No.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-TTL-2"
+   ]
+  },
+  {
+   "id": "PRB-042",
+   "answer": "All label buttons are enabled (on). Note shown: \"Label limit reached (3)\".",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-LBL-1"
+   ]
+  },
+  {
+   "id": "PRB-044",
+   "answer": "Comment shows: \"Mika Ito · Sending…\". User can type: No.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CMT-1",
+    "FIX-L8"
+   ]
+  },
+  {
+   "id": "PRB-047",
+   "answer": "Address: Board (\"#/\"). Focus: Place title. Comment sent: Yes (request sent but not completed).",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-CMT-1",
+    "NAV-T3.2"
+   ]
+  },
+  {
+   "id": "PRB-048",
+   "answer": "Shows \"2 comments\" and the list of comments.",
+   "basis": "STATED",
+   "cites": [
+    "SCN-CRD-3"
+   ]
+  },
+  {
+   "id": "PRB-049",
+   "answer": "Address: \"#/?labels=bug\". History change: Depth unchanged (Back replaced current). Focus: Place title.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-NAV-2",
+    "NAV-T3.1",
+    "NAV-T1.3"
+   ]
+  },
+  {
+   "id": "PRB-050",
+   "answer": "Shown: Card SL-114. History change: Increased by 1. Card loads requested: 1.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-NAV-2",
+    "NAV-T3.2"
+   ]
+  },
+  {
+   "id": "PRB-051",
+   "answer": "Page shows \"Card not found\", text \"There is no card SL-999 on this board.\", link \"Go to the board\". Window title: \"SL-999 · Slate\". Card load requested: No.",
+   "basis": "DERIVED",
+   "cites": [
+    "SCN-NAV-7",
+    "WEB-2"
+   ]
+  }
+ ],
+ "ambiguities": [],
+ "contradictions": [],
+ "toolCalls": 0
+}

@@ -232,6 +232,8 @@ MOV-2 [must] origin: extracted  sets: Column, Notice
   raise Error "Couldn't move SL-107. It is back in Backlog." with action "Retry". "Retry" does
   CRY-T1 rows 2 and 3 again for the same column and position number. Row 2 applies only if
   the card is not in that column now.
+  Example: SL-107 is at position 7 of Backlog. Its move to Ready fails. Backlog is again
+  SL-101 to SL-110 in order, with SL-107 between SL-106 and SL-108.
   Fail: the notice comes at the drop, before the reply.
 MOV-3 [must] origin: extracted  sets: Column, focus
   When the undo of a move starts, Slate shall put each moved card back at the

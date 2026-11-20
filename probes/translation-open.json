@@ -1,0 +1,197 @@
+{
+ "PRB-003": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-004": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-005": {
+  "status": "untranslatable",
+  "reason": "The probe checks the window title (WEB-2), which is not in the observation vocabulary and has no Then step in the scenario grammar.",
+  "attempts": 1
+ },
+ "PRB-006": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 2
+ },
+ "PRB-007": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 6
+ },
+ "PRB-008": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 7
+ },
+ "PRB-009": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-011": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-013": {
+  "status": "untranslatable",
+  "reason": "The probe presses Tab to move focus from a card to the next control, and no intent in spec/app.md is bound to that key in this context (Tab to the focus stop is only the binding of focus-card).",
+  "attempts": 1
+ },
+ "PRB-014": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 6
+ },
+ "PRB-015": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 13
+ },
+ "PRB-016": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 7
+ },
+ "PRB-017": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 9
+ },
+ "PRB-019": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 10
+ },
+ "PRB-021": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-022": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-023": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-024": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 2
+ },
+ "PRB-025": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-026": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-028": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-029": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-030": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 2
+ },
+ "PRB-031": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-032": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-033": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-035": {
+  "status": "ok",
+  "attempts": 2,
+  "checks": 4
+ },
+ "PRB-037": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 2
+ },
+ "PRB-038": {
+  "status": "untranslatable",
+  "reason": "the probe presses Control+Z while focus is in the filter field, where the web sheet binds no intent to that key (undo is bound only outside text, and in a field the key keeps the platform text-undo default), so \"When undo.\" would say the opposite of what the probe tests.",
+  "attempts": 1
+ },
+ "PRB-039": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-040": {
+  "status": "untranslatable",
+  "reason": "The probe checks the window title, which is not in the observation vocabulary and has no step in the scenario grammar.",
+  "attempts": 1
+ },
+ "PRB-041": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-042": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 7
+ },
+ "PRB-044": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-047": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-048": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-049": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-050": {
+  "status": "untranslatable",
+  "reason": "The probe checks the window title, which is not in the observation vocabulary and has no \"Then\" step in the scenario grammar.",
+  "attempts": 1
+ },
+ "PRB-051": {
+  "status": "untranslatable",
+  "reason": "The probe checks the window title \"Not found · Slate\", and the scenario grammar has no step that observes a window title.",
+  "attempts": 1
+ }
+}

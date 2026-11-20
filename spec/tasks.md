@@ -17,7 +17,8 @@ TSK-3 Move three cards at once. Start: Board.Ready, no selection.
   Outcome: Review is SL-106, SL-108, SL-107. Notice "Moved 1 card to Review."
 TSK-4 Rename a card. Start: Card.Ready for SL-105.
   Steps: edit the title; enter "Write the onboarding guide"; commit.  Count: 3
-  Outcome: the place title is "Write the onboarding guide". Mark "Saving…" goes after 400 ms.
+  Outcome: the place title is "Write the onboarding guide". Mark "Saving…" shows at the
+  commit and is removed 400 ms later.
 TSK-5 Add a comment. Start: Card.Ready for SL-101, Comments.None.
   Steps: enter "Looks fine."; commit.  Count: 2
   Outcome: "1 comment"; the comment shows "Mika Ito" and the time of the reply.

@@ -1,0 +1,256 @@
+{
+ "answers": [
+  {
+   "id": "PRB-003",
+   "answer": "The Ready column shows an error message with a Retry button (cards not loaded); the count line under the filters shows only the loaded cards from the other columns (excluding Ready), e.g. a total that omits Ready's cards.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-004",
+   "answer": "The board with all five columns loaded and cards shown; 2 board loads were requested in all; focus is on the board heading/main content area (the region that replaced the error), not on the Try again button which is gone.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-005",
+   "answer": "The window title shows the card's title/ID for SL-102 (e.g. 'SL-102 · Slate'); 2 card loads were requested.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-006",
+   "answer": "The address is still #/ (the filter is debounced and not yet applied); Backlog still shows all its cards unfiltered.",
+   "basis": "DERIVED",
+   "cites": [
+    "PRB-007"
+   ]
+  },
+  {
+   "id": "PRB-007",
+   "answer": "The address becomes #/?q=login%20fix; the history did not grow (replaced, not pushed); Backlog and Ready show only cards matching 'login fix' (e.g. Backlog SL-102, Ready SL-111).",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-024"
+   ]
+  },
+  {
+   "id": "PRB-008",
+   "answer": "Focus is on card SL-125 (the matching card) on the board, after the filter applies immediately on Enter.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-009",
+   "answer": "The address is normalized to #/?labels=bug,perf&q=search%20results (unknown label dropped, sorted, whitespace collapsed); history did not grow (replaced); cards shown are those with both bug and perf labels matching 'search results'.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-011",
+   "answer": "Focus stays on SL-119 (ArrowRight does nothing without move mode).",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-013",
+   "answer": "Focus moves to the next focusable element after the board's card list (card roving tabindex leaves the board), e.g. the bulk toolbar/next control after the board, not another card.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-014",
+   "answer": "The address is #/?q=sl-125; focus is on the board/card (first Escape leaves the field to the board, second does nothing more), e.g. on the card SL-125.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-015",
+   "answer": "0 cards selected (x selects SL-111; Shift+X selects all Ready; Shift+X again deselects all of the column).",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-019"
+   ]
+  },
+  {
+   "id": "PRB-016",
+   "answer": "In progress contains SL-101, SL-102, SL-103 plus its existing cards (appended at the end); the notice says 'Moved 3 cards to In progress' with an Undo; the 3 moved cards stay selected.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-017",
+   "answer": "Notice says 'Moved 2 of 3 cards to Review. 1 failed' (with Retry); SL-107 stays selected only; Backlog has SL-107 still in its original place without SL-106 and SL-108, and Review has SL-106 and SL-108 appended at the end.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-019",
+   "answer": "0 cards are selected? No: 7 stay selected—selection persists through filters; after Clear filters, 7 cards are selected.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-021",
+   "answer": "SL-119 is in Review; the notice says 'Moved SL-119 to Review' with Undo.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-022",
+   "answer": "SL-116 is in In progress; the notice says 'Moved SL-116 to In progress'; 2 move requests were sent in all.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-023",
+   "answer": "Ready order is unchanged with SL-101 inserted? The drop lands after SL-113 / before the item under the pointer; notice says 'Moved SL-101 to Ready'.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-024",
+   "answer": "Backlog first four cards in original order with SL-111 inserted at the position after SL-102 (second position): SL-101, SL-102, SL-111, SL-103.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-025",
+   "answer": "SL-107 is back in its original column (Backlog) after rollback; focus returns to card SL-107; the notice says 'Couldn't move SL-107' with a Retry button.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-026",
+   "answer": "SL-107 is in Ready (the retry succeeds); the notice says 'Moved SL-107 to Ready'.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-028",
+   "answer": "SL-108 stays in the column it was moved to (undo failed, rolled forward); the notice says 'Couldn't undo move of SL-108'.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-029",
+   "answer": "Focus moves to the previous card SL-109; no delete request is sent yet (a delayed delete with Undo notice).",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-030",
+   "answer": "No delete request has been sent yet; the notice is still shown.",
+   "basis": "DERIVED",
+   "cites": [
+    "PRB-031"
+   ]
+  },
+  {
+   "id": "PRB-031",
+   "answer": "Yes, the delete request has been sent; the notice is dismissed.",
+   "basis": "DERIVED",
+   "cites": [
+    "PRB-030"
+   ]
+  },
+  {
+   "id": "PRB-032",
+   "answer": "SL-105 is back in its original place in its column; focus is on SL-105; no delete request was sent.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-033",
+   "answer": "1 delete request has been sent (SL-103 is committed when a new delete starts); the notice says SL-105 deleted with Undo.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-035",
+   "answer": "SL-125 is restored to its original place in its column; the notice says 'Couldn't delete SL-125' with a Retry.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-037",
+   "answer": "Yes, the failure notice is still shown (error notices persist until dismissed).",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-038",
+   "answer": "SL-101 is still in the column it was moved to (Ctrl+Z in a text field is not intercepted); 1 move request was sent; the notice is still shown.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-039",
+   "answer": "An error message 'Title must be 80 characters or fewer' is shown; focus stays in the Title field; no save was sent.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-040",
+   "answer": "Yes, the title is accepted; focus returns to the 'Edit title' button; a save was sent.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-041",
+   "answer": "The original title is shown (blank rejected); a message 'Title is required' is shown; no save was sent.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-042",
+   "answer": "Only the labels not yet applied can be added (all other labels besides bug, ui, perf are pressable); a note says the card already has the maximum of 3 labels.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-044",
+   "answer": "The new comment shows 'First note' (trimmed) in a pending/sending state; the comment field is disabled so the user cannot type.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-047",
+   "answer": "The address is #/card/SL-114 still? Escape with unsaved draft does not close; address stays #/card/SL-114, focus in the comment field, no comment sent.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-048",
+   "answer": "The comments for SL-120 are listed (loaded successfully).",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-049",
+   "answer": "The address returns to #/?labels=bug; history gained one entry on open, and Escape goes back (history back); focus returns to card SL-114.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-050",
+   "answer": "The card detail SL-114 is shown again; history moves back/forward by one entry; 2 card loads were requested.",
+   "basis": "GUESS",
+   "cites": []
+  },
+  {
+   "id": "PRB-051",
+   "answer": "A 'Card not found' page; the window title is 'Card not found · Slate'; no card load was requested.",
+   "basis": "GUESS",
+   "cites": []
+  }
+ ],
+ "ambiguities": [
+  "PRB-019: whether selection persists when filtering hides selected cards",
+  "PRB-047: whether Escape closes the card with an unsent draft",
+  "PRB-023: drop position relative to the card under the pointer",
+  "PRB-051: whether an unknown ID triggers a load before not-found"
+ ],
+ "contradictions": [],
+ "toolCalls": 0
+}
