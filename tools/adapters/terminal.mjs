@@ -335,6 +335,8 @@ export function createTerminalAdapter({ command } = {}) {
       const texts = [];
       for (const p of d.parts) {
         if (p.role === "text" || p.role === "mark") texts.push(p.text ?? p.name);
+        // The web adapter gives the identifier and the title of a card as two texts.
+        else if (p.role === "card") texts.push(p.name.split(" ")[0], p.name.split(" ").slice(1).join(" "));
         else if (p.role !== "field" && p.role !== "placeholder") texts.push(p.name);
       }
       for (const c of d.cards) texts.push(...c.marks);

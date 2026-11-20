@@ -1,0 +1,178 @@
+{
+ "answers": [
+  {
+   "id": "PRB-001",
+   "answer": "The heading \"Done\", three placeholder blocks with no text, and the text \"Still loading…\" below them. No cards and no count line.",
+   "basis": "DERIVED",
+   "cites": [
+    "BRD-1",
+    "COL-1",
+    "FIX-11",
+    "FIX-12",
+    "FIX-L2",
+    "Column face",
+    "conventions: timer rule"
+   ]
+  },
+  {
+   "id": "PRB-002",
+   "answer": "No. Only the heading \"Done\" and three placeholder blocks are shown, with no text.",
+   "basis": "DERIVED",
+   "cites": [
+    "COL-1",
+    "Column face",
+    "conventions: timer rule"
+   ]
+  },
+  {
+   "id": "PRB-010",
+   "answer": "Only SL-109 (in Backlog) and SL-114 (in Ready) are shown. Address: \"#/?labels=bug,ui&who=ana,mika\".",
+   "basis": "DERIVED",
+   "cites": [
+    "FLT-4",
+    "FLT-5",
+    "FLT-8",
+    "DAT-5",
+    "DAT-16",
+    "WEB-1"
+   ]
+  },
+  {
+   "id": "PRB-012",
+   "answer": "SL-119 has focus, the last card of In progress (the second card of that column).",
+   "basis": "DERIVED",
+   "cites": [
+    "FCS-2",
+    "DAT-12",
+    "FIX-4"
+   ]
+  },
+  {
+   "id": "PRB-018",
+   "answer": "\"Added \\\"docs\\\" to 1 of 2 cards. A card can have at most 3 labels.\" No action.",
+   "basis": "DERIVED",
+   "cites": [
+    "BLK-T3",
+    "BLK-T3.4",
+    "BLK-4",
+    "DAT-13",
+    "DAT-11",
+    "WEB-6"
+   ]
+  },
+  {
+   "id": "PRB-020",
+   "answer": "SL-102 is in Ready at position 3, between SL-112 and SL-113. Its mark is \"Saving…\". One move request was sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "CRY-1",
+    "CRY-2",
+    "CRY-T1.3",
+    "DAT-6",
+    "WEB-4"
+   ]
+  },
+  {
+   "id": "PRB-027",
+   "answer": "Title shown: \"Card title overflows on narrow screens\". Window title: \"SL-114 Card title overflows on narrow screens · Slate\". Notice (Error): \"Couldn't save the title of SL-114.\" with actions \"Retry\" and \"Dismiss\".",
+   "basis": "DERIVED",
+   "cites": [
+    "TTL-1",
+    "TTL-4",
+    "NTC-3",
+    "Notice.Error face",
+    "WEB-2",
+    "FIX-14 b"
+   ]
+  },
+  {
+   "id": "PRB-034",
+   "answer": "Address: \"#/\" (Board with no filter, the address it had). Focus: the place title \"Board\". Notice (Info): \"Deleted SL-114.\" with action \"Undo\".",
+   "basis": "DERIVED",
+   "cites": [
+    "DEL-T1",
+    "DEL-1",
+    "DEL-5",
+    "NAV-T1",
+    "PRP-1",
+    "MEM-T1",
+    "NTC-2"
+   ]
+  },
+  {
+   "id": "PRB-036",
+   "answer": "No notice is shown. SL-101 is at position 1 of Ready, above SL-111. One move request was sent.",
+   "basis": "DERIVED",
+   "cites": [
+    "MOV-1",
+    "NTC-2",
+    "NTC-5",
+    "CRY-T1.3",
+    "DIS-T1",
+    "conventions: timer rule"
+   ]
+  },
+  {
+   "id": "PRB-043",
+   "answer": "Address: \"#/card/SL-114\". Description shown: \"A long title pushes the labels out of the card.\" Focus: the action \"Edit description\".",
+   "basis": "DERIVED",
+   "cites": [
+    "DIS-T1.6",
+    "DSC-3",
+    "FIX-5",
+    "WEB-1",
+    "WEB-4"
+   ]
+  },
+  {
+   "id": "PRB-045",
+   "answer": "\"Mika Ito · 20 Nov 2026, 09:01\"",
+   "basis": "DERIVED",
+   "cites": [
+    "CMT-2",
+    "CMT-3",
+    "DAT-9",
+    "DAT-17",
+    "FIX-10",
+    "FIX-11",
+    "FIX-7"
+   ]
+  },
+  {
+   "id": "PRB-046",
+   "answer": "The field \"Add a comment\" contains \"this is Flaky\". Focus: the field \"Add a comment\". Message: \"Couldn't add the comment. Your text is back in the field.\" No notice.",
+   "basis": "DERIVED",
+   "cites": [
+    "CMT-T1.1",
+    "CMT-2",
+    "FIX-14 c",
+    "DAT-4"
+   ]
+  },
+  {
+   "id": "PRB-052",
+   "answer": "Address: \"#/\". The history grew by 2 entries compared with the start: the entry for the card, then a new entry for the board. Focus: the card SL-102 on the board (the focus stop).",
+   "basis": "DERIVED",
+   "cites": [
+    "NAV-3",
+    "DIS-T1.8",
+    "NAV-T3.2",
+    "NAV-T1.2",
+    "CRD-T1.3",
+    "FCS-1",
+    "MEM-T1"
+   ]
+  }
+ ],
+ "ambiguities": [
+  "PRB-010: the written form when the filter text is empty is not stated. I assumed the empty q part is omitted, as \"#/\" stands for no filter.",
+  "PRB-027 and PRB-046: the profile is not named, so I assumed \"default\", whose faults fail the title and the comment.",
+  "PRB-036: the notice is raised at 400 ms and its 8 s time ends at 8400 ms. I read the clock as having reached 8400 ms when the answer depends on it.",
+  "PRB-052: I assumed the page has focus when Escape is pressed, not the address bar.",
+  "PRB-034: the rules give the focus of the delete through DEL-T1 (\"as in DEL-1\") and NAV-T1 row 3. Both end at the place title, so I took that as the answer."
+ ],
+ "contradictions": [
+  "SCN-NAV-9 is tagged [terminal], but the package has no terminal modality sheet. Its addresses (\"board?...\", \"card/sl-114\") also disagree with the address forms in WEB-1 (\"#/...\"). The other questions do not depend on this."
+ ],
+ "toolCalls": 0
+}

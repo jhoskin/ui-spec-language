@@ -214,7 +214,15 @@ export async function runScenario(scn, adapter, { capabilities = [] } = {}) {
         await adapter.advance(step.ms);
         obs = null;
       } else if (step.kind === "fire") {
-        await adapter.fire(step.intent, step.args, step.via);
+        // "enter-address card SL-102" and "enter-address board" name an address by its parts.
+        // The adapter gives the written form of its stack.
+        let args = step.args;
+        if (step.intent === "enter-address" && args[0] === "card") {
+          args = [adapter.addressOf({ place: "card", id: args[1] })];
+        } else if (step.intent === "enter-address" && args[0] === "board") {
+          args = [adapter.addressOf({ place: "board", text: "", labels: [], assignees: [] })];
+        }
+        await adapter.fire(step.intent, args, step.via);
         obs = null;
       } else if (step.kind === "remember") {
         memory[step.name] = (await adapter.observe()).depth;

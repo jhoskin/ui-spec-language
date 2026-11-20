@@ -1,0 +1,118 @@
+{
+ "answers": [
+  {
+   "id": "PRB-001",
+   "answer": "The Done column shows its cards with loading finished, and no placeholders remain. Its last card is SL-127.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-002",
+    "PRB-012"
+   ]
+  },
+  {
+   "id": "PRB-002",
+   "answer": "No. Only the heading and placeholders are shown.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-001"
+   ]
+  },
+  {
+   "id": "PRB-010",
+   "answer": "Cannot be determined, because no mock data is given. Assumed rule: a card needs both labels ui and bug (AND), and its assignee is Mika Ito or Ana Ruiz (OR). Address: #/ (filters held in state, not written to the URL).",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-010"
+   ]
+  },
+  {
+   "id": "PRB-012",
+   "answer": "Focus moves to the Review column card nearest the same row position, clamped to its last card. Its identifier cannot be determined from the given data.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-012"
+   ]
+  },
+  {
+   "id": "PRB-018",
+   "answer": "Notice: \"Labeled 2 cards with docs.\" Actions: Undo.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-018"
+   ]
+  },
+  {
+   "id": "PRB-020",
+   "answer": "SL-102 is one column to the right of its start and one row lower in that column. It carries a pending-save mark. One move request was sent.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-020"
+   ]
+  },
+  {
+   "id": "PRB-027",
+   "answer": "Title shown: the original title, rolled back. Window title: the card id and original title followed by \"Slate\". Notice: \"Couldn't save the title. Change reverted.\" Actions: Retry.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-027"
+   ]
+  },
+  {
+   "id": "PRB-034",
+   "answer": "Address: #/. Focus: the board region, since SL-114 no longer exists. Notice: \"Deleted SL-114.\" Actions: Undo.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-034"
+   ]
+  },
+  {
+   "id": "PRB-036",
+   "answer": "No notice is shown, because the 8000 ms wait outlasts the undo window. SL-101 stays in its new column. One move request was sent. Ctrl+Z has no effect.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-036"
+   ]
+  },
+  {
+   "id": "PRB-043",
+   "answer": "Address: #/card/SL-114. Focus: the Edit description button. Description shown: the saved description, unchanged, without \"zzz\".",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-043"
+   ]
+  },
+  {
+   "id": "PRB-045",
+   "answer": "\"You · just now\" (the author label is assumed). The comment text is trimmed to \"First note\".",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-045"
+   ]
+  },
+  {
+   "id": "PRB-046",
+   "answer": "The comment field still contains \"this is Flaky\" so it can be retried. Focus is in the comment field. Message: \"Comment failed to post.\" Actions: Retry.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-046"
+   ]
+  },
+  {
+   "id": "PRB-052",
+   "answer": "Address: #/. Focus: the SL-102 card on the board. The history gained one entry compared with the start, and the current entry is #/. Escape went back, so the forward entry remains.",
+   "basis": "GUESS",
+   "cites": [
+    "PRB-052"
+   ]
+  }
+ ],
+ "ambiguities": [
+  "No specification is given, so every answer is a convention-based guess.",
+  "PRB-010: filter combination rules (AND vs OR) for labels and assignees are not stated, and card data is not given.",
+  "PRB-036: the length of the undo window is not stated; if Ctrl+Z works regardless of time, the answer changes.",
+  "PRB-045: the timestamp could be relative (\"just now\") or absolute (e.g. 09:01 UTC).",
+  "PRB-052: Escape could use history.back() (history length unchanged after the first push) or replaceState (no extra entry)."
+ ],
+ "contradictions": [],
+ "toolCalls": 0
+}

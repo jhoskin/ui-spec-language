@@ -1,0 +1,67 @@
+{
+ "PRB-001": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 6
+ },
+ "PRB-002": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 2
+ },
+ "PRB-010": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 7
+ },
+ "PRB-012": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-018": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-020": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-027": {
+  "status": "untranslatable",
+  "reason": "the probe checks the window title, which is not an observation the scenario grammar can say (it has no step for a window title, and the observation vocabulary has no such term).",
+  "attempts": 1
+ },
+ "PRB-034": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 7
+ },
+ "PRB-036": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 4
+ },
+ "PRB-043": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-045": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ },
+ "PRB-046": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 5
+ },
+ "PRB-052": {
+  "status": "ok",
+  "attempts": 1,
+  "checks": 3
+ }
+}
