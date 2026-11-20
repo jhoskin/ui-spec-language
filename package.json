@@ -1,0 +1,11 @@
+{
+  "name": "ui-spec-language",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Reference implementation of a text specification format for user interfaces",
+  "engines": { "node": ">=24" },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
+}
